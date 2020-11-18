@@ -4,6 +4,7 @@ from cryptography.hazmat.primitives import hashes
 from cryptography.hazmat.primitives.kdf.pbkdf2 import PBKDF2HMAC
 from cryptography.hazmat.primitives.kdf.scrypt import Scrypt
 
+
 # Key derivation functions
 # https://cryptography.io/en/latest/hazmat/primitives/key-derivation-functions/
 # Key derivation functions derive bytes suitable for cryptographic operations
@@ -17,11 +18,11 @@ class KeyDerivationFunctionTest(unittest.TestCase):
     def test_PBKDF2(self):
         salt = os.urandom(16)
         kdf = PBKDF2HMAC(
-                algorithm = hashes.SHA256(),
-                length = 32,
-                salt = salt,
-                iterations = 100000,
-                )
+            algorithm=hashes.SHA256(),
+            length=32,
+            salt=salt,
+            iterations=100000,
+        )
         key = kdf.derive(b"password")
         print(key.hex())
 
@@ -31,14 +32,15 @@ class KeyDerivationFunctionTest(unittest.TestCase):
     def test_scrypt(self):
         salt = os.urandom(16)
         kdf = Scrypt(
-            salt = salt,
-            length = 32,
-            n = 2 ** 14,
-            r = 8,
-            p = 1
-            )
+            salt=salt,
+            length=32,
+            n=2 ** 14,
+            r=8,
+            p=1
+        )
         key = kdf.derive(b"password")
         print(key.hex())
+
 
 if __name__ == '__main__':
     unittest.main()

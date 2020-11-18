@@ -3,6 +3,7 @@ import random
 import os
 import secrets
 
+
 # Generate secure random numbers for managing secrets
 # https://docs.python.org/3/library/secrets.html#random-numbers
 
@@ -14,7 +15,7 @@ class RandomNumberTest(unittest.TestCase):
     # For security or cryptographic uses, see the secrets module.
     def test_randint(self):
         random.seed(1)  # if no value is given, the current system time is used
-        b = random.randint(0,1000)
+        b = random.randint(0, 1000)
         print(b)
 
     #  It is our recommendation to always use your operating system’s provided random
@@ -34,6 +35,7 @@ class RandomNumberTest(unittest.TestCase):
     def test_random_token_urlsafe(self):
         iv = secrets.token_urlsafe(16)
         print(iv)
+
 
 if __name__ == '__main__':
     unittest.main()

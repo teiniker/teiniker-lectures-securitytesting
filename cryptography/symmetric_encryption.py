@@ -2,6 +2,7 @@ import unittest
 import os
 from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
 
+
 # Symmetric encryption
 # https://cryptography.io/en/latest/hazmat/primitives/symmetric-encryption/
 # Symmetric encryption is a way to encrypt or hide the contents of material
@@ -10,8 +11,8 @@ from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
 class SymmetricEncryptionTest(unittest.TestCase):
 
     def setUp(self):
-        self.key = os.urandom(32)   # 256 bit key
-        self.iv = os.urandom(16)    # equal to block size
+        self.key = os.urandom(32)  # 256 bit key
+        self.iv = os.urandom(16)  # equal to block size
         self.cipher = Cipher(algorithms.AES(self.key), modes.CTR(self.iv))
 
     def test_encryption_and_decryption(self):
