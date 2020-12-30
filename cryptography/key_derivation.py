@@ -6,7 +6,7 @@ from cryptography.hazmat.primitives.kdf.scrypt import Scrypt
 
 
 # Key derivation functions
-# https://cryptography.io/en/latest/hazmat/primitives/key-derivation-functions/
+# https://cryptography.io/en/latest/hazmat/primitives/key-derivation-functions.html
 # Key derivation functions derive bytes suitable for cryptographic operations
 # from passwords or other data sources using a pseudo-random function (PRF).
 
