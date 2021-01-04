@@ -32,14 +32,6 @@ $ sudo john passwords-shadow.txt
   Press 'q' or Ctrl-C to abort, almost any other key for status
   student          (student)
 
-$ sudo zip2john Foto.zip > password-zip.txt
-$ sudo john --format=zip password-zip.txt
-    Using default input encoding: UTF-8
-    Loaded 1 password hash (ZIP, WinZip [PBKDF2-SHA1 128/128 AVX 4x])
-    Press 'q' or Ctrl-C to abort, almost any other key for status
-    admin            (SoSe2018-SoftwareSecurity-Outline-KW16.zip)
-
-
 References:
     https://youtu.be/XjVYl1Ts6XI
 	https://www.youtube.com/channel/UC0ZTPkdxlAKf-V33tqXwi3Q
