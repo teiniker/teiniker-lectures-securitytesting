@@ -25,6 +25,11 @@ f05a4f9bef09d057c355c6e28fec5543
 $ openssl rand -base64 16
 gokRIzPgvBsnQd5fshD9fg==
 ```
+Parameters:
+* **rand**: Generate pseudo-random bytes.
+* **-hex**: Show the output as a hex string.
+* **-base64**: Perform base64 encoding on the output.
+* **-out file**: Write to file instead of standard output.
  
 ## Generating a File Fingerprint (Hash Value)
 The digest functions output the message digest of a supplied file or files in hexadecimal. 
@@ -60,7 +65,12 @@ xGp7shRR6ykLLPKx75gj3KPjt0hqBP+4WXJRZdAt8k44YAt2FN11C/8M2bazYNdp
 zK0Ot5tcBeH7KuM1BEzd78cIJBUW
 -----END PRIVATE KEY-----
 ```
-
+Parameters: 
+* **genpkey**: Generate a private key.
+* **-algorithm alg**: Public key algorithm to use such as **RSA**, DSA or DH.
+* **-pkeyopt opt:value**: Set the public key algorithm option `opt` to `value`.
+* **-out filename**: Output the key to the specified file. If this argument is not specified then standard output is used.
+ 
 Having previously generated your private key, you may generate the corresponding **public key** using the following command:
 ```
 $ openssl pkey -in private-key.pem -out public-key.pem -pubout
@@ -76,6 +86,17 @@ kWK+pn2FV8/KjGaYXhR+TeDg/TXj6db43GPXCPFjYtu/a6kWvT7xEK1tE+4r/P8X
 h//Br01zuuLfBgtd633gT1UCAwEAAQ==
 -----END PUBLIC KEY-----
 ```
+Parameters:
+* **pkey**: Public or private key processing tool.
+* **-in filename**: This specifies the **input filename** to read a key from or standard input 
+   if this option is not specified. 
+   If the key is encrypted a pass phrase will be prompted for.
+* **-out filename**: This specifies the **output filename** to write a key to or standard output 
+   if this option is not specified. 
+   If any encryption options are set then a pass phrase will be prompted for. 
+   The output filename should **not be the same** as the input filename.
+* **-pubout**: By default a private key is output: with this option a **public key** will be 
+   output instead. This option is automatically set if the input is a public key.
 
 ## Generating Self-Signed Certificates
 

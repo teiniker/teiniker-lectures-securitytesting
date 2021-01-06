@@ -32,6 +32,9 @@ class AsymmetricEncryptionTest(unittest.TestCase):
                 label=None
             )
         )
+        # Optimal Asymmetric Encryption Padding (OAEP) is a padding scheme
+        # often used together with RSA encryption.
+        # OAEP was introduced by Bellare and Rogaway and subsequently standardized in RFC 2437
         print('Ciphertext: ' + ciphertext.hex())
 
         # decrypt a message

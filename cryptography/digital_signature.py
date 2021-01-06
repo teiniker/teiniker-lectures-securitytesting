@@ -33,6 +33,7 @@ class SignatureTest(unittest.TestCase):
                 ),
                 hashes.SHA256()
             )
+        # Probabilistic Signature Scheme (PSS) is a padding scheme designed by Mihir Bellare and Phillip Rogaway.
         print('Signature: ' + signature.hex())
 
         # verify a message
