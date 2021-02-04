@@ -1,6 +1,6 @@
-# Penetration testing
+# Penetration Testing
 
-Penetration testing, also referred to as **ethical hacking**, is the process of testing a system for vulnerabilities that an attacker could exploit.
+Pen testing, also referred to as **ethical hacking**, is the process of testing a system for vulnerabilities that an attacker could exploit.
 
 The goal of penetration testing is to **find the holes in our security** so that we can fix them before attackers discover them.
 
