@@ -1,4 +1,4 @@
-#Penetration testing
+# Penetration testing
 
 Penetration testing, also referred to as **ethical hacking**, is the process of testing a system for vulnerabilities that an attacker could exploit.
 
