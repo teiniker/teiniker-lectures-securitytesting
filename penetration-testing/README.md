@@ -23,5 +23,18 @@ The following areas of penetration testing will be covered:
   * [c-file-access](https://github.com/teiniker/teiniker-lectures-securitytesting/tree/main/penetration-testing/reverse-engineering/c-file-access)
   * [c-secret-anti-debugging](https://github.com/teiniker/teiniker-lectures-securitytesting/tree/main/penetration-testing/reverse-engineering/c-secret-anti-debug)
 
+## References
+* Jason Andress. **Foundations of Information Security**. No Starch Press, 2019
+* Aaron Guzman, Aditya Gupta. **IoT Penetration Testing Cookbook**. Packt Publishing, 2017
+* Patrick Engebretson. **The Basics of Hacking and Penetration Testing**. Syngress, 2011
+ 
+* Wade Alcorn, Christian Frichot, Michele Orru. **The Browser Hacker‘s Handbook**. Wiley, 2014
+* Dafydd Stuttard, Marcus Pinto. **The Web Application Hacker’s Handbook**. Wiley, 2nd Edition, 2011
+
+* Jon Erickson. **Hacking - The Art of Exploitation**. No Starch Press, 2nd Edition, 2008
+* Daniel Regalado, Shon Harris, Allen Harper, Chris Eagle, Jonathan Ness, Branko Spasojevic, Ryan Linn, Stephen Sims. **Gray Hat Hacking**. McGraw Hill Education, 4th Edition, 2015
+* Bruce Dang, Alexandre Gazet, Elias Bachaalany. **Practical Reverse Engineering**. Wiley, 2014
+* Ryan O’Neill. **Learning Linux Binary Analysis**. Packt Publishing, 2016
+
 *Egon Teiniker, 2020-2021, GPL v3.0*
  
