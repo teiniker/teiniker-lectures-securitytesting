@@ -3,15 +3,18 @@
 Cryptography is the basis of sustainable information security. 
 The following examples show the most important **cryptographic operations in their applications**.
 
+* Python 
+  * [Python Bytes and Bytearrays](https://github.com/teiniker/teiniker-lectures-securitytesting/tree/main/cryptography/python_bytes)
+
 * Encryption od Data at Rest
-  * [Random Numbers](https://github.com/teiniker/teiniker-lectures-securitytesting/blob/main/cryptography/random_numbers.py)
-  * [Message Digest](https://github.com/teiniker/teiniker-lectures-securitytesting/blob/main/cryptography/message_digest.py)
-  * [Key Derivation Functions](https://github.com/teiniker/teiniker-lectures-securitytesting/blob/main/cryptography/key_derivation.py)
-  * [Message Authentication Code](https://github.com/teiniker/teiniker-lectures-securitytesting/blob/main/cryptography/message_authentication_code.py)
-  * [Symmetric Encryption](https://github.com/teiniker/teiniker-lectures-securitytesting/blob/main/cryptography/symmetric_encryption.py)
-  * [Asymmetric Encryption](https://github.com/teiniker/teiniker-lectures-securitytesting/blob/main/cryptography/asymmetric_encryption.py)
-  * [Digital Signatures](https://github.com/teiniker/teiniker-lectures-securitytesting/blob/main/cryptography/digital_signature.py)
-  * [Digital Certificates](https://github.com/teiniker/teiniker-lectures-securitytesting/new/main/cryptography/README-OpenSSL.md)
+  * [Random Numbers](https://github.com/teiniker/teiniker-lectures-securitytesting/blob/main/cryptography/random_numbers/)
+  * [Message Digest](https://github.com/teiniker/teiniker-lectures-securitytesting/blob/main/cryptography/message_digest/)
+  * [Key Derivation Functions](https://github.com/teiniker/teiniker-lectures-securitytesting/blob/main/cryptography/key_derivation/)
+  * [Message Authentication Code](https://github.com/teiniker/teiniker-lectures-securitytesting/blob/main/cryptography/message_authentication_code/)
+  * [Symmetric Encryption](https://github.com/teiniker/teiniker-lectures-securitytesting/blob/main/cryptography/symmetric_encryption/)
+  * [Asymmetric Encryption](https://github.com/teiniker/teiniker-lectures-securitytesting/blob/main/cryptography/asymmetric_encryption/)
+  * [Digital Signatures](https://github.com/teiniker/teiniker-lectures-securitytesting/blob/main/cryptography/digital_signature/)
+  * [Digital Certificates](https://github.com/teiniker/teiniker-lectures-securitytesting/new/main/cryptography/digital_certificates)
 
 * Encryption of Data in Transit
 
