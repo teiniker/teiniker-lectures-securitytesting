@@ -19,7 +19,7 @@ The following examples show the most important **cryptographic operations in the
 * Encryption of Data in Transit
 
 Using cryptography in Python also needs some **libraries and tools**, which we have to 
-[setup](https://github.com/teiniker/teiniker-lectures-securitytesting/blob/main/cryptography/doc/Setup.md).
+[setup](https://github.com/teiniker/teiniker-lectures-securitytesting/tree/main/setup).
 
 ## References
 * Christof Paar, Jan Pelzl, et al. **Understanding Cryptography: A Textbook for Students and Practitioners**. Springer, 2010 
