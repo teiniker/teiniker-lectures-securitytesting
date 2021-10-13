@@ -13,7 +13,7 @@ The following examples show the most important **cryptographic operations in the
   * [Message Authentication Code](https://github.com/teiniker/teiniker-lectures-securitytesting/blob/main/cryptography/message_authentication_code/)
   * [Symmetric Encryption](https://github.com/teiniker/teiniker-lectures-securitytesting/blob/main/cryptography/symmetric_encryption/)
   * [Asymmetric Encryption](https://github.com/teiniker/teiniker-lectures-securitytesting/blob/main/cryptography/asymmetric_encryption/)
-  * [Digital Signatures](https://github.com/teiniker/teiniker-lectures-securitytesting/blob/main/cryptography/digital_signature/)
+  * [Digital Signatures](https://github.com/teiniker/teiniker-lectures-securitytesting/blob/main/cryptography/digital_signatures/)
   * [Digital Certificates](https://github.com/teiniker/teiniker-lectures-securitytesting/new/main/cryptography/digital_certificates)
 
 * Encryption of Data in Transit
