@@ -2,9 +2,6 @@ import unittest
 import os
 import jwt
 
-# PyJWT
-# $ pip install PyJWT
-# https://github.com/jpadilla/pyjwt
 
 class JsonWebTokenTest(unittest.TestCase):
 

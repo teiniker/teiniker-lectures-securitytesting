@@ -37,7 +37,7 @@ class PasswordEncryptionTest(unittest.TestCase):
     def test_wordlist(self):
         password_hash = "04e77bf8f95cb3e1a36a59d1e93857c411930db646b46c218a0352e432023cf2"
         print(os.getcwd())
-        file = open('../wordlist.txt')
+        file = open('wordlist.txt')
         lines = file.read().splitlines()
         for line in lines:
             hash = self.encyption.encrypt(line)

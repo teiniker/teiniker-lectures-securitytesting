@@ -3,24 +3,6 @@ import hashlib
 import os
 
 
-# Exercise: Password Brute Force Attack
-#
-# 1. PasswordEncryption
-# Implement a class "PasswordEncryption" with the following methods:
-#   def encrypt(self, password):
-#   verify(self, password, password_hash):
-# To encrypt the password, use a SHA-256 algorithm.
-# Verify your implementation using the test_encrypt() and test_verify(self) tests.
-#
-# 2. Brute Force Attack
-# Implement a test_bruteforce() test which reads common passwords from
-# the "wordlist.txt" file. Each line will be encrypted and compared to the
-# given hash value:
-#    password_hash = "04e77bf8f95cb3e1a36a59d1e93857c411930db646b46c218a0352e432023cf2"
-# If the hash values match, you have found the plaintext password - print it to the
-# console window.
-#
-
 class PasswordEncryption:
 
     def encrypt(self, password):

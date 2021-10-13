@@ -1,21 +1,10 @@
 import unittest
 import hashlib
 
+
 class Fingerprint:
-    def from_file(self, filename):
-        with open(filename, 'rb') as f:
-            buffer = f.read()
-        return self.from_bytes(buffer)
-
-    def from_string(self, text):
-        return self.from_bytes(text.encode('utf-8'))
-
-    def from_bytes(selfself, data):
-        digest = hashlib.sha256()
-        digest.update(data)
-        password_hash = digest.hexdigest()
-        return password_hash
-
+    # TODO
+    pass
 
 class FingerprintTest(unittest.TestCase):
     def setUp(self):
@@ -39,7 +28,7 @@ class FingerprintTest(unittest.TestCase):
         hash = self.fingerprint.from_file(filename)
         print(hash)
         self.assertEqual("fd17b0ff31d7fb7b4e202b0cd99e1f11aa1f4972aab81010544a4e562f42bac7", hash)
-        # compare with $ sha256sum wordlist.txt
+
 
 if __name__ == '__main__':
     unittest.main()

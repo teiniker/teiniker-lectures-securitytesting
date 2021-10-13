@@ -1,24 +1,30 @@
 import unittest
 from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
 
-# Exercise: File Encryptor
-#
-# Implement a class called "FileEncrypter" with the following operations:
-# 1. __init__(self, key, iv)
-#   A constructor that takes a secret key and an initialization vector (iv) to setup
-#   an AES cipher in CTR mode.
-#
-# 2. save(self, filename, data)
-#   Encrypt the given data with the AES cipher.
-#   Store the ciphertext in a binary file with the given "filename".
-#
-# 3. load(self, filename)
-#   Load the content of a binary file with the given "filename".
-#   Decrypt the loaded bytes with the AES cipher and return the plaintext data.
-
 class FileEncryptor:
-    # TODO
-    pass
+    def __init__(self, key, iv):
+        self.cipher = Cipher(algorithms.AES(key), modes.CTR(iv))
+
+    def load(self, filename):
+        with open(filename, 'rb') as f:
+            ciphertext = f.read()
+        return self.decrypt(ciphertext)
+
+    def save(self, filename, data):
+        ciphertext = self.encrypt(data)
+        with open(filename, 'wb') as f:
+            f.write(ciphertext)
+
+    def encrypt(self, plaintext):
+        encryptor = self.cipher.encryptor()
+        ciphertext = encryptor.update(plaintext) + encryptor.finalize()
+        return ciphertext
+
+    def decrypt(self, ciphertext):
+        decryptor = self.cipher.decryptor()
+        plaintext = decryptor.update(ciphertext) + decryptor.finalize()
+        return plaintext
+
 
 class FileEncryptorTest(unittest.TestCase):
     def setUp(self):
@@ -32,10 +38,10 @@ class FileEncryptorTest(unittest.TestCase):
 
     def test_save_bytes(self):
         data = bytearray(b'\x00\x01\x02\x03\x04\x05\x06\x07\x08\x09\x0a\x0b\x0c\x0d\x0e\x0f')
-        hash = self.encrypter.save('../secure.data', data)
+        hash = self.encrypter.save('secure.data', data)
 
     def test_load_bytes(self):
-        data = self.encrypter.load('../secure.data')
+        data = self.encrypter.load('secure.data')
         print(data)
         self.assertEqual("000102030405060708090a0b0c0d0e0f", data.hex())
 

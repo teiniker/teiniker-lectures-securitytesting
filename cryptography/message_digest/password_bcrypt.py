@@ -8,7 +8,8 @@ import bcrypt
 class BCryptTest(unittest.TestCase):
 
     def test_bcrypt(self):
-        passwd = b's$cret12'
+        #passwd = b's$cret12'
+        passwd = b'bono'
         # randomly generated salt
         salt = bcrypt.gensalt()
         hashed = bcrypt.hashpw(passwd, salt)
