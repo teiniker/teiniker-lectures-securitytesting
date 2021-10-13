@@ -9,7 +9,7 @@ The following examples show the most important **cryptographic operations in the
 * Encryption od Data at Rest
   * [Random Numbers](https://github.com/teiniker/teiniker-lectures-securitytesting/blob/main/cryptography/random_numbers/)
   * [Message Digest](https://github.com/teiniker/teiniker-lectures-securitytesting/blob/main/cryptography/message_digest/)
-  * [Key Derivation Functions](https://github.com/teiniker/teiniker-lectures-securitytesting/blob/main/cryptography/key_derivation/)
+  * [Key Derivation Functions](https://github.com/teiniker/teiniker-lectures-securitytesting/tree/main/cryptography/key_derivation_function/)
   * [Message Authentication Code](https://github.com/teiniker/teiniker-lectures-securitytesting/blob/main/cryptography/message_authentication_code/)
   * [Symmetric Encryption](https://github.com/teiniker/teiniker-lectures-securitytesting/blob/main/cryptography/symmetric_encryption/)
   * [Asymmetric Encryption](https://github.com/teiniker/teiniker-lectures-securitytesting/blob/main/cryptography/asymmetric_encryption/)
