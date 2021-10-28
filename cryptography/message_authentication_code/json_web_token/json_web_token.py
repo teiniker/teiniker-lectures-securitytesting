@@ -24,11 +24,3 @@ class JsonWebTokenTest(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-
-# References:
-
-# JSON Web Token Tutorial with Example in Python
-# https://dev.to/apcelent/json-web-token-tutorial-with-example-in-python-23kb
-
-# JWT Debugger
-# https://jwt.io/

@@ -5,11 +5,6 @@ from cryptography.hazmat.primitives.kdf.pbkdf2 import PBKDF2HMAC
 from cryptography.hazmat.primitives.kdf.scrypt import Scrypt
 
 
-# Key derivation functions
-# https://cryptography.io/en/latest/hazmat/primitives/key-derivation-functions.html
-# Key derivation functions derive bytes suitable for cryptographic operations
-# from passwords or other data sources using a pseudo-random function (PRF).
-
 class KeyDerivationFunctionTest(unittest.TestCase):
 
     # PBKDF2 (Password Based Key Derivation Function 2) is typically used for
@@ -27,8 +22,6 @@ class KeyDerivationFunctionTest(unittest.TestCase):
         print(key.hex())
 
     # Scrypt is a KDF designed for password storage by Colin Percival
-    # to be resistant against hardware-assisted attackers by having a
-    # tunable memory cost. It is described in RFC 7914.
     def test_scrypt(self):
         salt = os.urandom(16)
         kdf = Scrypt(

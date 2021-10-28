@@ -2,12 +2,6 @@ import unittest
 import os
 from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
 
-
-# Symmetric encryption
-# https://cryptography.io/en/latest/hazmat/primitives/symmetric-encryption/
-# Symmetric encryption is a way to encrypt or hide the contents of material
-# where the sender and receiver both use the same secret key.
-
 class SymmetricEncryptionTest(unittest.TestCase):
 
     def setUp(self):
@@ -18,7 +12,7 @@ class SymmetricEncryptionTest(unittest.TestCase):
     def test_encryption_and_decryption(self):
         encryptor = self.cipher.encryptor()
         ct = encryptor.update("This is a secret message.".encode('utf-8')) + encryptor.finalize()
-        print(ct.hex());
+        print(ct.hex())
 
         decryptor = self.cipher.decryptor()
         pt = decryptor.update(ct) + decryptor.finalize()
