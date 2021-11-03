@@ -1,21 +1,6 @@
 import unittest
 from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
 
-# Exercise: File Encryptor
-#
-# Implement a class called "FileEncrypter" with the following operations:
-# 1. __init__(self, key, iv)
-#   A constructor that takes a secret key and an initialization vector (iv) to setup
-#   an AES cipher in CTR mode.
-#
-# 2. save(self, filename, data)
-#   Encrypt the given data with the AES cipher.
-#   Store the ciphertext in a binary file with the given "filename".
-#
-# 3. load(self, filename)
-#   Load the content of a binary file with the given "filename".
-#   Decrypt the loaded bytes with the AES cipher and return the plaintext data.
-
 class FileEncryptor:
     # TODO
     pass

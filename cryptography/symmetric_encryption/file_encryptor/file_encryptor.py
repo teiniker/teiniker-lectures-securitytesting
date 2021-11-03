@@ -17,12 +17,14 @@ class FileEncryptor:
 
     def encrypt(self, plaintext):
         encryptor = self.cipher.encryptor()
-        ciphertext = encryptor.update(plaintext) + encryptor.finalize()
+        ciphertext = encryptor.update(plaintext) 
+        encryptor.finalize()
         return ciphertext
 
     def decrypt(self, ciphertext):
         decryptor = self.cipher.decryptor()
-        plaintext = decryptor.update(ciphertext) + decryptor.finalize()
+        plaintext = decryptor.update(ciphertext) 
+        decryptor.finalize()
         return plaintext
 
 
