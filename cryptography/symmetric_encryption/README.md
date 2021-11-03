@@ -63,9 +63,8 @@ by XOR-ing the block of data to be encrypted with the last block of
 cipher text produced and then applying the raw cipher to produce the next 
 block of cipher text. 
 
-The `IvParameterSpec` object is used to carry the i**nitialization vector (IV)**
-It is the IV that provides the initial block of cipher text that is 
-XOR-ed with the first block of input.
+It is the **initialization vector (IV)** that provides the initial block of 
+cipher text that is XOR-ed with the first block of input.
 
 Forgetting to set the IV (or setting it to the wrong value) is a very 
 common programming error. The indicator for this error is that the first 
