@@ -24,9 +24,9 @@ To construct byte arrays, use the `bytearray()` function.
 
 * str.encode(): **Returns a bytes representation** of the Unicode string, encoded in the requested encoding.
 
-* bytes.fromhex():
+* bytes.fromhex(): This method **creates a bytes object** from a string of hexadecimal digits.
 
-
+* bytes.decode(): This function is used to **convert bytes to string object**.
 
 ## References
 
