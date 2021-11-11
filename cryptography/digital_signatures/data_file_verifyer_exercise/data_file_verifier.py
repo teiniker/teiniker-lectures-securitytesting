@@ -46,37 +46,37 @@ class SignatureTest(unittest.TestCase):
         data = self.verifier.verify_data_file('measurement')
         print('Verified data: ' + data.hex())
 
-    # def test_load_and_verify_invalid(self):
-    #     with self.assertRaises(InvalidSignature):
-    #         self.verifier.verify_data_file('measurement2')
+    def test_load_and_verify_invalid(self):
+        with self.assertRaises(InvalidSignature):
+            self.verifier.verify_data_file('measurement2')
 
 
-    # def test_save_data_and_signature(self):
-    #     # Create data file
-    #     with open('measurement.data', 'wb') as f:
-    #         data = bytearray(b'\x00\x01\x02\x03\x04\x05\x06\x07\x08\x09\x0a\x0b\x0c\x0d\x0e\x0f')
-    #         f.write(data)
+    def test_save_data_and_signature(self):
+        # Create data file
+        with open('measurement.data', 'wb') as f:
+            data = bytearray(b'\x00\x01\x02\x03\x04\x05\x06\x07\x08\x09\x0a\x0b\x0c\x0d\x0e\x0f')
+            f.write(data)
 
-    #     # Create data file signature
-    #     with open("private_key.pem", "rb") as key_file:
-    #         self.private_key = serialization.load_pem_private_key(
-    #             key_file.read(),
-    #             password=None,
-    #         )
-    #         print('Load private key: ' + str(self.private_key))
+        # Create data file signature
+        with open("private_key.pem", "rb") as key_file:
+            self.private_key = serialization.load_pem_private_key(
+                key_file.read(),
+                password=None,
+            )
+            print('Load private key: ' + str(self.private_key))
 
-    #     signature = self.private_key.sign(
-    #         data,
-    #         padding.PSS(
-    #             padding.MGF1(
-    #                 hashes.SHA256()),
-    #                 salt_length = padding.PSS.MAX_LENGTH
-    #             ),
-    #             hashes.SHA256()
-    #         )
-    #     print('Signature: ' + signature.hex())
-    #     with open('measurement.signature', 'wb') as f:
-    #         f.write(signature)
+        signature = self.private_key.sign(
+            data,
+            padding.PSS(
+                padding.MGF1(
+                    hashes.SHA256()),
+                    salt_length = padding.PSS.MAX_LENGTH
+                ),
+                hashes.SHA256()
+            )
+        print('Signature: ' + signature.hex())
+        with open('measurement.signature', 'wb') as f:
+            f.write(signature)
 
 if __name__ == '__main__':
     unittest.main()
