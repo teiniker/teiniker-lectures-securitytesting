@@ -7,7 +7,7 @@ The following examples show the most important **cryptographic operations in the
   * [Python Bytes and Bytearrays](https://github.com/teiniker/teiniker-lectures-securitytesting/tree/main/cryptography/python_bytes)
   * [Setup Cryptographic Libraries in Python](https://github.com/teiniker/teiniker-lectures-securitytesting/tree/main/cryptography/setup)
   
-* Encryption od Data at Rest
+* Encryption of Data at Rest
   * [Random Numbers](https://github.com/teiniker/teiniker-lectures-securitytesting/blob/main/cryptography/random_numbers/)
   * [Message Digest](https://github.com/teiniker/teiniker-lectures-securitytesting/blob/main/cryptography/message_digest/)
   * [Key Derivation Functions](https://github.com/teiniker/teiniker-lectures-securitytesting/tree/main/cryptography/key_derivation_function/)
