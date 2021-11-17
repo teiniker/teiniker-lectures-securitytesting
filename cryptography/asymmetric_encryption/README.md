@@ -2,7 +2,7 @@
 
 To generate an RSA **private key** type the following command:
 ```
-$ openssl genpkey -algorithm RSA -pkeyopt rsa_keygen_bits:4096 -out private-key.pem
+$ openssl genpkey -algorithm RSA -pkeyopt rsa_keygen_bits:4096 -out openssl-private-key.pem
 $ cat private-key.pem
 -----BEGIN PRIVATE KEY-----
 MIIJQQIBADANBgkqhkiG9w0BAQEFAASCCSswggknAgEAAoICAQC18RulJsPhX8TM
@@ -22,7 +22,7 @@ Parameters:
  
 Having previously generated your private key, you may generate the corresponding **public key** using the following command:
 ```
-$ openssl pkey -in private-key.pem -out public-key.pem -pubout
+$ openssl pkey -in private-key.pem -out openssl-public-key.pem -pubout
 $ cat public-key.pem 
 -----BEGIN PUBLIC KEY-----
 MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAtfEbpSbD4V/EzB9uf9Ms

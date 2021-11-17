@@ -50,9 +50,9 @@ class AsymmetricKeysTest(unittest.TestCase):
             )
             print('Public key: ' + str(pubk))
 
-    # Generate "private-key.pem" via opensSSL
+    # Generate "openssl-private-key.pem" via opensSSL
     def test_load_private_key(self):
-        with open("private-key.pem", "rb") as key_file:
+        with open("openssl-private-key.pem", "rb") as key_file:
             pk = serialization.load_pem_private_key(
                 key_file.read(),
                 password=None,
@@ -60,9 +60,9 @@ class AsymmetricKeysTest(unittest.TestCase):
             print('Private key: ' + str(pk))
             print('Public  key: ' + str(pk.public_key()))
 
-    # Generate "public-key.pem" via opensSSL
+    # Generate "openssl-public-key.pem" via opensSSL
     def test_load_public_key(self):
-        with open("public-key.pem", "rb") as key_file:
+        with open("openssl-public-key.pem", "rb") as key_file:
             pubk = serialization.load_pem_public_key(
                 key_file.read()
             )
