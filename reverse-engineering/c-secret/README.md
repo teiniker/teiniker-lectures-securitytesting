@@ -244,4 +244,4 @@ ACD0-84F1-9A56-47BC
 * [Hopper Disassembler](https://www.hopperapp.com/) the reverse engineering tool that lets you disassemble, decompile and debug your applications.
 
 
-*Egon Teiniker, 2020, GPL v3.0* 
+*Egon Teiniker, 2020-2021, GPL v3.0* 
