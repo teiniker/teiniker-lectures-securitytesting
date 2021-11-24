@@ -50,7 +50,7 @@ _DVRF_v03.bin.extracted/squashfs-root/
 Now we can **navigate in the file system** and analyse configuration files, stored certificates, web pages, etc.
 Because this is a manual task, it can take some time. 
 
-Here is a tool called `firmwalker` which can automate most of this work:
+Here is a tool called **firmwalker** which can automate most of this work:
 ```
 $ ./firmwalker.sh ../_DVRF_v03.bin.extracted/squashfs-root/
 ***Firmware Directory***
