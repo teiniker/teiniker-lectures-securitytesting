@@ -22,7 +22,7 @@ Parameters:
  
 Having previously generated your private key, you may generate the corresponding **public key** using the following command:
 ```
-$ openssl pkey -in private-key.pem -out openssl-public-key.pem -pubout
+$ openssl pkey -in openssl-private-key.pem -out openssl-public-key.pem -pubout
 $ cat public-key.pem 
 -----BEGIN PUBLIC KEY-----
 MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAtfEbpSbD4V/EzB9uf9Ms
