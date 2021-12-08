@@ -16,8 +16,8 @@ There are two ways of reverse engineering:
   * [secret](https://github.com/teiniker/teiniker-lectures-securitytesting/tree/main/reverse-engineering/c-secret)  
   
 * **Dynamic Analysis**
-  * [system-calls](https://github.com/teiniker/teiniker-lectures-securitytesting/tree/main/reverse-engineering/c-system-calls)
   * [file-access](https://github.com/teiniker/teiniker-lectures-securitytesting/tree/main/reverse-engineering/c-file-access)
+  * [database-calls](https://github.com/teiniker/teiniker-lectures-securitytesting/tree/main/reverse-engineering/c-database-access)
   * [secret](https://github.com/teiniker/teiniker-lectures-securitytesting/tree/main/reverse-engineering/c-secret)
   * [secret-anti-debug](https://github.com/teiniker/teiniker-lectures-securitytesting/tree/main/reverse-engineering/c-secret-anti-debug)
   
