@@ -37,6 +37,8 @@ bool is_valid_user(char* username, char* password)
 }
 ```
 
+## Using strace
+
 Note that **file access is based on system calls** (open, write, read, close)
 so we can use **strace** to find out more.
 ```
@@ -101,6 +103,78 @@ Welcome, teacher!
 ```
 
 _Exercise_: Make the same experiment but use **ltrace** instead of strace.
+
+
+## Using gdb
+
+We disassemble `main()` and set a breakpoint after the call to `is_valid_user()`.
+
+```
+(gdb) disass main
+Dump of assembler code for function main:
+   0x0000555555555291 <+0>:	    push   %rbp
+   0x0000555555555292 <+1>:	    mov    %rsp,%rbp
+    ...
+   0x0000555555555302 <+113>:	mov    %rdx,%rsi
+   0x0000555555555305 <+116>:	mov    %rax,%rdi
+   0x0000555555555308 <+119>:	call   0x5555555551a5 <is_valid_user>
+   0x000055555555530d <+124>:	test   %al,%al              # <= breakpoint!!!!!
+   0x000055555555530f <+126>:	je     0x55555555532e <main+157>
+   0x0000555555555311 <+128>:	lea    -0x100(%rbp),%rax
+   0x0000555555555318 <+135>:	mov    %rax,%rsi
+   0x000055555555531b <+138>:	lea    0xd50(%rip),%rdi        # 0x555555556072
+   0x0000555555555322 <+145>:	mov    $0x0,%eax
+   0x0000555555555327 <+150>:	call   0x555555555060 <printf@plt>
+   0x000055555555532c <+155>:	jmp    0x55555555533a <main+169>
+   0x000055555555532e <+157>:	lea    0xd4b(%rip),%rdi        # 0x555555556080
+   0x0000555555555335 <+164>:	call   0x555555555040 <puts@plt>
+   0x000055555555533a <+169>:	mov    $0x0,%eax
+   0x000055555555533f <+174>:	leave  
+   0x0000555555555340 <+175>:	ret    
+End of assembler dump.
+(gdb) break *0x000055555555530d
+Breakpoint 1 at 0x55555555530d: file file_login.c, line 42.
+```
+Now, we run the program and hold at the breakpoint.
+
+```
+(gdb) run
+
+Starting program: c-file-access/file_login 
+username> student
+password> student
+
+Breakpoint 1, main () at file_login.c:42
+
+(gdb) disass
+Dump of assembler code for function main:
+   0x0000555555555291 <+0>:	    push   %rbp
+   0x0000555555555292 <+1>:	    mov    %rsp,%rbp
+    ...
+   0x0000555555555302 <+113>:	mov    %rdx,%rsi
+   0x0000555555555305 <+116>:	mov    %rax,%rdi
+   0x0000555555555308 <+119>:	call   0x5555555551a5 <is_valid_user>
+=> 0x000055555555530d <+124>:	test   %al,%al
+   0x000055555555530f <+126>:	je     0x55555555532e <main+157>
+   0x0000555555555311 <+128>:	lea    -0x100(%rbp),%rax
+    ...
+End of assembler dump.
+
+(gdb) p $al
+$1 = 0
+
+(gdb) set $al=1
+
+(gdb) continue
+Continuing.
+Welcome, student!
+```
+
+We print the content of the of the `al` register and change it to `1`.
+When we continue the execution, we are logged in!
+
+Note that we did not know the password, we just changed the outcome of the 
+`is_valid_user()` function which is used to check if an entered password is valid.
 
 
 ## References:

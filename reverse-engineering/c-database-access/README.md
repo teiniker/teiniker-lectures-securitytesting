@@ -1,4 +1,4 @@
-# Example: Tracing System Calls
+# Example: Database Access - Tracing System Calls
 
 The following example shows how dynamic reverse engineering techniques can be 
 used to analyze a client's communication with a database.
