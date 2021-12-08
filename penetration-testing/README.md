@@ -4,16 +4,12 @@ Pen testing, also referred to as **ethical hacking**, is the process of testing 
 
 The goal of penetration testing is to **find the holes in our security** so that we can fix them before attackers discover them.
 
-The following areas of penetration testing will be covered:
-
-* Embedded Web Applications
-  * Web Clients
-  * Access Control
-  * Attacking Browsers
+The following areas of penetration testing will be covered in the context of **embedded web applications**:
 
 * **Tool Setup**
   * [cURL](https://github.com/teiniker/teiniker-lectures-securitytesting/tree/main/penetration-testing/setup/cURL)
   * [ZAP](https://github.com/teiniker/teiniker-lectures-securitytesting/tree/main/penetration-testing/setup/ZAP)
+
 
 * [**HTTP/S Protocol**](https://github.com/teiniker/teiniker-lectures-securitytesting/tree/main/penetration-testing/http-protocol)
 
