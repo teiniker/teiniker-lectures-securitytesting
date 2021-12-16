@@ -3,17 +3,25 @@
 John the Ripper is an Open Source password security auditing and password recovery tool 
 available for many operating systems. 
 
-## Setup 
-
-We use Debian's package manager to install John the Ripper:
-
-```
-$ sudo apt install john 
-```
-
 _Tip_: Remove the `.john` directory before you run these examples.
 ```
 $ sudo rm -r /root/.john
+```
+
+## Cracking Linux Passwords
+
+```
+$ cat passwords-shadow.txt
+student:$6$wRUypFSMS1P/TZ37$SmzPx5guncYyVOd368wi/YvTvWDPlzWtG1kEuVIrImp6tw502oPyOYNivBR/6QBeK18P9t.FG6QlEC2M9N.m01::0:99999:7:::
+
+$ sudo john passwords-shadow.txt
+  Created directory: /root/.john
+  Warning: detected hash type "sha512crypt", but the string is also recognized as "crypt"
+  Use the "--format=crypt" option to force loading these as that type instead
+  Using default input encoding: UTF-8
+  Loaded 1 password hash (sha512crypt, crypt(3) $6$ [SHA512 128/128 AVX 2x])
+  Press 'q' or Ctrl-C to abort, almost any other key for status
+  student          (student)
 ```
 
 ## Cracking Raw Hash-Values
@@ -33,22 +41,6 @@ $ sudo john --format=raw-sha512 passwords-sha512.txt
     bono             (?)
     abba             (?)
     neon             (?)
-```
-
-## Cracking Linux Passwords
-
-```
-$ cat passwords-shadow.txt
-student:$6$wRUypFSMS1P/TZ37$SmzPx5guncYyVOd368wi/YvTvWDPlzWtG1kEuVIrImp6tw502oPyOYNivBR/6QBeK18P9t.FG6QlEC2M9N.m01::0:99999:7:::
-
-$ sudo john passwords-shadow.txt
-  Created directory: /root/.john
-  Warning: detected hash type "sha512crypt", but the string is also recognized as "crypt"
-  Use the "--format=crypt" option to force loading these as that type instead
-  Using default input encoding: UTF-8
-  Loaded 1 password hash (sha512crypt, crypt(3) $6$ [SHA512 128/128 AVX 2x])
-  Press 'q' or Ctrl-C to abort, almost any other key for status
-  student          (student)
 ```
 
 ## References
