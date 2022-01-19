@@ -1,33 +1,35 @@
-Strings in C
-----------------------------------------------------------------
+# Strings in C
 
-Technically, a string is equivalent to a character array.
-An array is simply a list of n elements of a specific data type.
+In C, a string is equivalent to a **character array**.
+An array is simply a list of `n` elements of a specific data type.
 Arrays are also reffered to as buffers.
 
-The last byte of a string is a null byte '\0' which is used
+The last byte of a string is a null byte `'\0'` which is used
 as a delimiter character.
 
 
-String functions (vulnerable)
------------------------------
+## Vulnerable String Functions 
 
+The C standard library is shipped with some vulnerable string functions.
+
+```C
 #include <string.h>
+```
 
-char *strcpy(char *dest, const char *src);
-    The  strcpy()  function  copies the string pointed to by src, including
-    the terminating null byte ('\0'), to the buffer  pointed  to  by  dest.
+* **char *strcpy(char *dest, const char *src)**\
+    The  `strcpy()`  function  copies the string pointed to by `src`, including
+    the terminating null byte `'\0'`, to the buffer pointed  to by `dest`.
 
-char *gets(char *s);
-    gets()  reads  a  line  from  stdin into the buffer pointed to by s until 
-    either a terminating newline or EOF, which it replaces with a null byte ('\0'). 
+* **char *gets(char *s)**\
+    `gets()`  reads a line from `stdin` into the buffer pointed to by s until 
+    either a terminating newline or EOF, which it replaces with a null byte `'\0'`. 
 
-int puts(const char *s);
-    puts() writes the string s and a trailing newline to stdout.
+* **int puts(const char *s)**\
+    `puts()` writes the string `s` and a trailing newline to `stdout`.
 
 
-Example: string_copy.c
-
+_Example_: Using `strcpy()`
+```C
   1 #include <stdio.h>
   2 #include <string.h>
   3 
@@ -39,7 +41,10 @@ Example: string_copy.c
   9     printf("%s", str_a);
  10     return 0;
  11 }
+```
 
+_Example_: Using gdb to **analyze a string in memory**
+```
 (gdb) break main
 Breakpoint 1, main () at string_copy.c:8
 8               strcpy(str_a, "Hello world!\n");
@@ -83,10 +88,10 @@ $2 = (char (*)[20]) 0x7fffffffda00
 (gdb) c
 Continuing.
 Hello world!
+```
 
-Truncate the string by inserting a '\0' character:
---------------------------------------------------
-
+_Example_: Using gdb to **truncate a string by inserting a '\0' character**
+```
 (gdb) set *(0x7fffffffda00+5)='\0'
 
 (gdb) x/s str_a
@@ -95,4 +100,11 @@ Truncate the string by inserting a '\0' character:
 (gdb) c
 Continuing.
 Hello
+```
 
+## References
+* Jon Erickson. **Hacking - The Art of Exploitation**. No Starch Press, 2nd Edition, 2008
+* Daniel Regalado, Shon Harris, Allen Harper, Chris Eagle, Jonathan Ness, Branko Spasojevic, Ryan Linn, Stephen Sims. **Gray Hat Hacking**. McGraw Hill Education, 4th Edition, 2015
+
+
+*Egon Teiniker, 2020 - 2022, GPL v3.0*
