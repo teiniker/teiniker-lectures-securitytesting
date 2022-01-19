@@ -13,6 +13,7 @@ The following areas of penetration testing will be covered in the context of **e
 
 * [**HTTP/S Protocol**](https://github.com/teiniker/teiniker-lectures-securitytesting/tree/main/penetration-testing/http-protocol)
 
+* [**Access Control**](https://github.com/teiniker/teiniker-lectures-securitytesting/tree/main/penetration-testing/access-control)
 
 * [**C Applications**](https://github.com/teiniker/teiniker-lectures-securitytesting/tree/main/penetration-testing/c-applications/) 
   
