@@ -14,6 +14,25 @@ exhaustive search. One way to do this is to include an iteration count in the
 key derivation technique, indicating how many times to iterate some underlying
 function by which keys are derived.
 
+The `hashlib.pbkdf2_hmac()` function provides PKCS#5 password-based key derivation function 2. It uses HMAC as pseudorandom function.
+
+_Example_: Cryptographically secure PRNG in Python 
+```Python
+def test_PBKDF2(self):
+      salt = secrets.token_bytes(16)
+      password = b'password'
+      iterations = 500000
+      key_len = 32
+      key = pbkdf2_hmac('sha256', password, salt, iterations, key_len)
+      print(key.hex())
+```
+* `hashlib.pbkdf2_hmac(hash_name, password, salt, iterations, dklen=None)`
+      * The string hash_name is the desired name of the hash digest algorithm, 
+            e.g. `sha1` or `sha256`.
+      * `password` and `salt` are interpreted as buffers of bytes. Applications and libraries should limit `password` to a sensible length (e.g. 1024). `salt` should be about 16 or more bytes from a proper source.
+      * The number of `iterations` should be chosen based on the hash algorithm and computing power. As of 2022, hundreds of thousands of iterations of SHA-256 are suggested. 
+      * `dklen` is the length of the derived key.
+
 
 ## SCrypt
 
@@ -47,6 +66,7 @@ both r and p will increase.
 
 
 ## References
+* [hashlib - Key derivation](https://docs.python.org/3/library/hashlib.html#key-derivation)
 * [cryptography: Key derivation functions](https://cryptography.io/en/latest/hazmat/primitives/key-derivation-functions.html)
 
 * [RFC 7914: The scrypt Password-Based Key Derivation Function](https://tools.ietf.org/html/rfc7914)
@@ -55,4 +75,4 @@ both r and p will increase.
 * [WinZip: About Encryption](http://kb.winzip.com/help/help_encryption.htm)
 
 
-*Egon Teiniker, 2020-2021, GPL v3.0*
+*Egon Teiniker, 2020-2022, GPL v3.0*
