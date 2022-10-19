@@ -9,6 +9,7 @@ Python supports a range of types to store sequences. There are six sequence type
 **Bytes** and **bytearray** objects contain single bytes – the former is immutable while the latter is a mutable sequence. Bytes objects can be constructed the constructor, `bytes()`, and from literals; use a `b` prefix with normal string syntax: `b'python'`. 
 To construct byte arrays, use the `bytearray()` function.
 
+Distinguish the following types in Python: 
 
 * **str**:
     A string is a sequence of Unicode characters (encoded in UTF -16 or UTF-32 and entirely depends on Python’s compilation).
