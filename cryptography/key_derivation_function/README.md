@@ -66,6 +66,7 @@ both r and p will increase.
 
 
 ## References
+* [YouTube: Hashing Passwords Safely using a Password Based Key Derivation Function (PBKDF2)](https://youtu.be/cMykd0jScSY)
 * [hashlib - Key derivation](https://docs.python.org/3/library/hashlib.html#key-derivation)
 * [cryptography: Key derivation functions](https://cryptography.io/en/latest/hazmat/primitives/key-derivation-functions.html)
 
