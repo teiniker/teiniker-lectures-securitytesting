@@ -25,5 +25,5 @@ The following examples show the most important **cryptographic operations in the
 * Jean-Philippe Aumasson. **Serious Cryptography**. No Starch Press 2018
 
 
-*Egon Teiniker, 2020-2021, GPL v3.0*
+*Egon Teiniker, 2020-2022, GPL v3.0*
  

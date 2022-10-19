@@ -31,3 +31,7 @@ To construct byte arrays, use the `bytearray()` function.
 ## References
 
 * [Python Bytes, Bytearray](https://www.w3resource.com/python/python-bytes.php)
+
+
+*Egon Teiniker, 2020-2022, GPL v3.0*
+ 
