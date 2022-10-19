@@ -19,19 +19,19 @@ The `hashlib.pbkdf2_hmac()` function provides PKCS#5 password-based key derivati
 _Example_: Cryptographically secure PRNG in Python 
 ```Python
 def test_PBKDF2(self):
-      salt = secrets.token_bytes(16)
-      password = b'password'
-      iterations = 500000
-      key_len = 32
-      key = pbkdf2_hmac('sha256', password, salt, iterations, key_len)
-      print(key.hex())
+    salt = secrets.token_bytes(16)
+    password = b'password'
+    iterations = 500000
+    key_len = 32
+    key = pbkdf2_hmac('sha256', password, salt, iterations, key_len)
+    print(key.hex())
 ```
 * `hashlib.pbkdf2_hmac(hash_name, password, salt, iterations, dklen=None)`
-      * The string hash_name is the desired name of the hash digest algorithm, 
+   * The string hash_name is the desired name of the hash digest algorithm, 
             e.g. `sha1` or `sha256`.
-      * `password` and `salt` are interpreted as buffers of bytes. Applications and libraries should limit `password` to a sensible length (e.g. 1024). `salt` should be about 16 or more bytes from a proper source.
-      * The number of `iterations` should be chosen based on the hash algorithm and computing power. As of 2022, hundreds of thousands of iterations of SHA-256 are suggested. 
-      * `dklen` is the length of the derived key.
+   * `password` and `salt` are interpreted as buffers of bytes. Applications and libraries should limit `password` to a sensible length (e.g. 1024). `salt` should be about 16 or more bytes from a proper source.
+   * The number of `iterations` should be chosen based on the hash algorithm and computing power. As of 2022, hundreds of thousands of iterations of SHA-256 are suggested. 
+   * `dklen` is the length of the derived key.
 
 
 ## SCrypt
