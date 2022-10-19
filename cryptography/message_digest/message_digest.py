@@ -2,9 +2,6 @@ import unittest
 import hashlib
 
 
-# Secure hashes and message digests
-# https://docs.python.org/3/library/hashlib.html
-
 class MessageDigestTest(unittest.TestCase):
 
     def test_SHA256(self):
