@@ -27,6 +27,7 @@ def test_PBKDF2(self):
       print(key.hex())
 ```
 * `hashlib.pbkdf2_hmac(hash_name, password, salt, iterations, dklen=None)`
+
       * The string hash_name is the desired name of the hash digest algorithm, 
             e.g. `sha1` or `sha256`.
       * `password` and `salt` are interpreted as buffers of bytes. Applications and libraries should limit `password` to a sensible length (e.g. 1024). `salt` should be about 16 or more bytes from a proper source.
