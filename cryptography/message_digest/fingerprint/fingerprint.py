@@ -35,7 +35,7 @@ class FingerprintTest(unittest.TestCase):
         self.assertEqual("3b8be20de1d75d3087f5591b0687d9b3fd036a68b42dc27c5c9618a9bb72732e", hash)
 
     def test_from_file(self):
-        filename = "wordlist.txt"
+        filename = "./wordlist.txt"
         hash = self.fingerprint.from_file(filename)
         print(hash)
         self.assertEqual("fd17b0ff31d7fb7b4e202b0cd99e1f11aa1f4972aab81010544a4e562f42bac7", hash)
