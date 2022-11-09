@@ -8,16 +8,18 @@ Digital signature algorithms are based on the use of cryptographic hashes.
 This allows us to make sure that a message comes from the creator of our public key (the private key holder) and that 
 it wasn’t tampered with in transit.
 
-![Digital Signature](Signature.png)
-
 There are two processes that are associated with digital signatures:
 
 * **Signature construction**: We get a Signature object of type **SHA256withRSA**, initialize it with the private key, 
     updated it with all the bytes in our message and then generate a signature with the `sign()` method.
+    
+    ![Digital Signature](Signature.png)
 
 * **Signature verification**: We get a Signature instance, set it up to verify with the public key, feed it all the 
     plain text bytes and then use the signature bytes to see if the signature matches.
     This verify method returns a boolean indicating whether the signature is valid or not.
+
+    ![Digital Signature Verification](VerifySignature.png)
 
 ## References
 
