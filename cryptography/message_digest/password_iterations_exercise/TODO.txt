@@ -12,7 +12,7 @@ The class should provide (at least) the following methods:
     Salt and password will be hashed "iteration" times
     Salt and hashed password should be concatenated and returned as bytes
 
-2. verify(self, plaintext_password, encrypted_password)
+2. verify(self, plaintext_password, encrypted_password, iterations)
     Extract the salt (16 bytes) from the given encrypted_password
     Use the salt, the plaintext_password, and the iteration count to encrypt the password
     Compare the encrypted password with the given encrypted_password
