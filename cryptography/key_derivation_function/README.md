@@ -31,7 +31,7 @@ def test_PBKDF2(self):
             e.g. `sha1` or `sha256`.
    * `password` and `salt` are interpreted as buffers of bytes. Applications and libraries should limit `password` to a sensible length (e.g. 1024). `salt` should be about 16 or more bytes from a proper source.
    * The number of `iterations` should be chosen based on the hash algorithm and computing power. As of 2022, hundreds of thousands of iterations of SHA-256 are suggested. 
-   * `dklen` is the length of the derived key.
+   * `key_len` is the length of the derived key.
 
 
 ## SCrypt
