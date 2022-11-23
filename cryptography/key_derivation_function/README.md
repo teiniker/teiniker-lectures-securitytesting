@@ -16,7 +16,7 @@ function by which keys are derived.
 
 The `hashlib.pbkdf2_hmac()` function provides PKCS#5 password-based key derivation function 2. It uses HMAC as pseudorandom function.
 
-_Example_: Cryptographically secure PRNG in Python 
+_Example_: PBKDF2 in Python 
 ```Python
 def test_PBKDF2(self):
     salt = secrets.token_bytes(16)
