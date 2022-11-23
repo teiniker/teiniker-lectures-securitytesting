@@ -10,7 +10,7 @@ class Fingerprint:
     def from_string(self, text):
         return self.from_bytes(text.encode('utf-8'))
 
-    def from_bytes(selfself, data):
+    def from_bytes(self, data):
         digest = hashlib.sha256()
         digest.update(data)
         password_hash = digest.hexdigest()
