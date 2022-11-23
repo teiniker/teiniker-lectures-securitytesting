@@ -4,8 +4,6 @@ from cryptography.hazmat.primitives.asymmetric import rsa
 from cryptography.hazmat.primitives import hashes
 from cryptography.hazmat.primitives.asymmetric import padding
 
-from cryptography.hazmat.primitives import serialization
-
 # Signature
 # https://cryptography.io/en/latest/hazmat/primitives/asymmetric/index.html
 # A private key can be used to sign a message.
