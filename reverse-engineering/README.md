@@ -28,7 +28,7 @@ Many reverse engineering tools are supplied with regular Linux distributions, ot
   * [database-calls](analysis-dynamic/database-access)
   * [file-access](analysis-dynamic/file-access)
   * [file-access-stripped](analysis-dynamic/file-access-stripped)
-  * [secret-anti-debug](analysis-dynamic/c-secret-anti-debug)
+  * [secret-anti-debug](analysis-dynamic/secret-anti-debug)
  
                         
 ## References:
