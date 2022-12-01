@@ -1,0 +1,14 @@
+{
+    "python.pythonPath": "python3",
+    "python.terminal.executeInFileDir" : true,
+    "code-runner.executorMap": {
+        "python": "python3 -u",
+    },
+    "code-runner.fileDirectoryAsCwd": true,
+
+    "python.linting.pylintEnabled": true,
+    "python.linting.pylintArgs": ["--disable=missing-module-docstring,missing-class-docstring,missing-function-docstring"],
+
+    "python.linting.mypyEnabled": true
+
+}
