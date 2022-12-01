@@ -36,7 +36,7 @@ class FileEncryptor:
 
     def decrypt(self, ciphertext):
         decryptor = self.cipher.decryptor()
-        plaintext = decryptor.update(ciphertext) 
+        plaintext = decryptor.update(ciphertext)
         decryptor.finalize()
         return plaintext
 

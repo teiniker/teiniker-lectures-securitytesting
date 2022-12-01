@@ -16,7 +16,7 @@ class SymmetricEncryptionTest(unittest.TestCase):
         print(ct.hex())
 
         decryptor = self.cipher.decryptor()
-        pt = decryptor.update(ct) 
+        pt = decryptor.update(ct)
         decryptor.finalize()
         print(pt.hex())
         print(pt.decode('utf-8'))

@@ -24,7 +24,7 @@ class FileEncryptor:
                 label=None
             )
         )
-        return ciphertext 
+        return ciphertext
 
 
 class FileEncryptorTest(unittest.TestCase):
