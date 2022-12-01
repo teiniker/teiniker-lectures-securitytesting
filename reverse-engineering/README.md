@@ -10,26 +10,30 @@ There are two ways of reverse engineering:
 * The **dynamic analysis** explores the running program. 
   Here, the interactions with its environment and the data flows inside the software system are in the foreground.
 
+## Tools Setup 
+Many reverse engineering tools are supplied with regular Linux distributions, others have to be installed later.
+* [Ghidra](setup/Ghidra.md)
+* [Hopper](setup/Hopper.md)
+
 ## Examples
 
 * **Static Analysis**
-  * [secret](https://github.com/teiniker/teiniker-lectures-securitytesting/tree/main/reverse-engineering/c-secret)  
+  * [secret-static](analysis-static/secret-static)  
+  * Exercise: [password-check](analysis-static/password-check-exercise) ([Model Solution](analysis-static/password-check))
+  * Exercise: [password-encryption](analysis-static/password-encryption-exercise) ([Model Solution](analysis-static/password-encryption))
+  * [secret-static-stripped](analysis-static/secret-static-stripped)
   
 * **Dynamic Analysis**
-  * [file-access](https://github.com/teiniker/teiniker-lectures-securitytesting/tree/main/reverse-engineering/c-file-access)
-  * [database-calls](https://github.com/teiniker/teiniker-lectures-securitytesting/tree/main/reverse-engineering/c-database-access)
-  * [secret](https://github.com/teiniker/teiniker-lectures-securitytesting/tree/main/reverse-engineering/c-secret)
-  * [secret-anti-debug](https://github.com/teiniker/teiniker-lectures-securitytesting/tree/main/reverse-engineering/c-secret-anti-debug)
-  
-## Tools Setup 
-Many reverse engineering tools are supplied with regular Linux distributions, others have to be installed later.
-* [Hopper](https://github.com/teiniker/teiniker-lectures-securitytesting/tree/main/reverse-engineering/setup/Hopper.md)
-* [Ghidra](https://github.com/teiniker/teiniker-lectures-securitytesting/tree/main/reverse-engineering/setup/Ghidra.md)
-
+  * [secret-dynamic](analysis-dynamic/secret-dynamic)
+  * [database-calls](analysis-dynamic/database-access)
+  * [file-access](analysis-dynamic/file-access)
+  * [file-access-stripped](analysis-dynamic/file-access-stripped)
+  * [secret-anti-debug](analysis-dynamic/secret-anti-debug)
+ 
                         
 ## References:
 * Jon Erickson. **Hacking - The Art of Exploitation**. No Starch Press, 2nd Edition, 2008
 * Daniel Regalado, Shon Harris, Allen Harper, Chris Eagle, Jonathan Ness, Branko Spasojevic, Ryan Linn, Stephen Sims. **Gray Hat Hacking**. McGraw Hill Education, 4th Edition, 2015
 * Ryan O’Neill. **Learning Linux Binary Analysis**. Packt Publishing, 2016
 
-*Egon Teiniker, 2020-2021, GPL v3.0*
+*Egon Teiniker, 2020-2022, GPL v3.0*
