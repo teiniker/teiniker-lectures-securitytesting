@@ -28,7 +28,7 @@ class DataFileSigner:
                     hashes.SHA256()
                 )
             print(signature.hex())    
-            self.save_signature(filename, signature)    
+            self.save_signature(filename, signature)
 
 
 class SignatureTest(unittest.TestCase):
