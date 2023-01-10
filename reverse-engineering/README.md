@@ -18,9 +18,12 @@ Many reverse engineering tools are supplied with regular Linux distributions, ot
 ## Examples
 
 * **Static Analysis**
+  * [C Standard Library Functions](analysis-static/c-std-lib)
   * [secret-static](analysis-static/secret-static)  
   * Exercise: [password-check](analysis-static/password-check-exercise) ([Model Solution](analysis-static/password-check))
   * Exercise: [password-encryption](analysis-static/password-encryption-exercise) ([Model Solution](analysis-static/password-encryption))
+  * Exercise: [password-encryption2](analysis-static/password-encryption2-exercise) ([Model Solution](analysis-static/password-encryption2))
+  * Exercise: [password-hardcoded](analysis-static/password-hardcoded-exercise) ([Model Solution](analysis-static/password-hardcoded))  
   * [secret-static-stripped](analysis-static/secret-static-stripped)
   
 * **Dynamic Analysis**
