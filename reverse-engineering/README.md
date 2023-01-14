@@ -18,9 +18,12 @@ Many reverse engineering tools are supplied with regular Linux distributions, ot
 ## Examples
 
 * **Static Analysis**
+  * [C Standard Library Functions](analysis-static/c-std-lib)
   * [secret-static](analysis-static/secret-static)  
   * Exercise: [password-check](analysis-static/password-check-exercise) ([Model Solution](analysis-static/password-check))
   * Exercise: [password-encryption](analysis-static/password-encryption-exercise) ([Model Solution](analysis-static/password-encryption))
+  * Exercise: [password-encryption2](analysis-static/password-encryption2-exercise) ([Model Solution](analysis-static/password-encryption2))
+  * Exercise: [password-hardcoded](analysis-static/password-hardcoded-exercise) ([Model Solution](analysis-static/password-hardcoded))  
   * [secret-static-stripped](analysis-static/secret-static-stripped)
   
 * **Dynamic Analysis**
@@ -36,4 +39,4 @@ Many reverse engineering tools are supplied with regular Linux distributions, ot
 * Daniel Regalado, Shon Harris, Allen Harper, Chris Eagle, Jonathan Ness, Branko Spasojevic, Ryan Linn, Stephen Sims. **Gray Hat Hacking**. McGraw Hill Education, 4th Edition, 2015
 * Ryan O’Neill. **Learning Linux Binary Analysis**. Packt Publishing, 2016
 
-*Egon Teiniker, 2020-2022, GPL v3.0*
+*Egon Teiniker, 2020-2023, GPL v3.0*
