@@ -1,4 +1,4 @@
-# Flask REST Service
+# REST Service
 
 In this example, we can see how simple a RESTful service can be implemented with
 **Flask**.
