@@ -1,4 +1,4 @@
-# Flask REST Service
+# Basic Authentication
 
 In this example, we can see how simple a RESTful service can be implemented with
 **Flask**.
@@ -16,7 +16,7 @@ $ python3 article_service.py
 ## Access the REST Service
 
 ### Find all Articles
-
+```
 $ curl -i -k https://localhost:8443/articles
 HTTP/1.1 401 UNAUTHORIZED
 Server: Werkzeug/2.2.2 Python/3.9.2
@@ -25,7 +25,7 @@ Content-Type: text/html; charset=utf-8
 Content-Length: 19
 WWW-Authenticate: Basic realm="Authentication Required"
 Connection: close
-
+```
 
 ```
 $ curl -i -k -u student:student https://localhost:8443/articles
