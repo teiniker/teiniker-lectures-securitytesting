@@ -10,12 +10,11 @@ The following areas of penetration testing will be covered in the context of **e
   * [cURL](https://github.com/teiniker/teiniker-lectures-securitytesting/tree/main/penetration-testing/setup/cURL)
   * [ZAP](https://github.com/teiniker/teiniker-lectures-securitytesting/tree/main/penetration-testing/setup/ZAP)
 
+* **API Security Basics**
+  * [HTTP/S Protocol](https://github.com/teiniker/teiniker-lectures-securitytesting/tree/main/penetration-testing/http-protocol)
+  * [Access Control](https://github.com/teiniker/teiniker-lectures-securitytesting/tree/main/penetration-testing/access-control)
 
-* [**HTTP/S Protocol**](https://github.com/teiniker/teiniker-lectures-securitytesting/tree/main/penetration-testing/http-protocol)
-
-* [**Access Control**](https://github.com/teiniker/teiniker-lectures-securitytesting/tree/main/penetration-testing/access-control)
-
-* [**C Applications**](https://github.com/teiniker/teiniker-lectures-securitytesting/tree/main/penetration-testing/c-applications/) 
+* [**C Application Security**](https://github.com/teiniker/teiniker-lectures-securitytesting/tree/main/penetration-testing/c-applications/) 
   
 
 ## References
@@ -31,5 +30,5 @@ The following areas of penetration testing will be covered in the context of **e
 * Bruce Dang, Alexandre Gazet, Elias Bachaalany. **Practical Reverse Engineering**. Wiley, 2014
 * Ryan O’Neill. **Learning Linux Binary Analysis**. Packt Publishing, 2016
 
-*Egon Teiniker, 2020-2021, GPL v3.0*
+*Egon Teiniker, 2020-2023, GPL v3.0*
  
