@@ -1,7 +1,7 @@
-# Flask REST Service
+# Transport Layer Security
 
 In this example, we can see how simple a RESTful service can be implemented with
-**Flask**.
+**Flask** using HTTPS.
 
 ## Setup 
 
