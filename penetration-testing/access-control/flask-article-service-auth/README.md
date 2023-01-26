@@ -4,8 +4,9 @@ In this example, we can see how simple a RESTful service can be implemented with
 **Flask**.
 
 ## Setup 
-
+```
 $ pip3 install Flask-HTTPAuth
+```
 
 We start the web service from the command line:
 ```
