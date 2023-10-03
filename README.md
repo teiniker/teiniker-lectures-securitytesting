@@ -5,17 +5,17 @@ the concepts of security and penetration testing in Python.
 
 The following topics will be covered:
 
-* Risk Analysis
+* [Risk Analysis](rist-analysis/)
 
-* [Cryptography in Practice](https://github.com/teiniker/teiniker-lectures-securitytesting/tree/main/cryptography)
+* [Cryptography in Practice](cryptography/)
 
-* [Reverse Engineering](https://github.com/teiniker/teiniker-lectures-securitytesting/tree/main/reverse-engineering)
+* [Reverse Engineering](reverse-engineering/)
  
-* [Penetration Testing](https://github.com/teiniker/teiniker-lectures-securitytesting/tree/main/penetration-testing)
+* [Penetration Testing](penetration-testing/)
 
 
-As a development environment, you can use a pre-configured **Debian 11 VM** image:
+As a development environment, you can use a pre-configured **Debian 12 VM** image:
 [Virtual Lab](https://drive.google.com/drive/folders/1AzsF4Mvh1HJ8k6OW5W5hQ5CF0HdqA51l)
 
-*Egon Teiniker, 2020-2021, GPL v3.0*
+*Egon Teiniker, 2020-2023, GPL v3.0*
  
