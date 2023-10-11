@@ -1,10 +1,6 @@
 import unittest
 import bcrypt
 
-
-# bcrypt
-# https://github.com/pyca/bcrypt/
-
 class BCryptTest(unittest.TestCase):
 
     def test_bcrypt(self):
@@ -18,8 +14,6 @@ class BCryptTest(unittest.TestCase):
             print("valid password")
         else:
             print("password rejected")
-
-
 
 
 if __name__ == '__main__':
