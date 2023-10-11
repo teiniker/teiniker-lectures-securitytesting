@@ -41,4 +41,4 @@ $ pip3 install pyjwt
 * [PyJWT](https://github.com/jpadilla/pyjwt)
 * [PyJWT Documentation](https://pyjwt.readthedocs.io/en/stable/)
 
-*Egon Teiniker, 2020-2021, GPL v3.0*
+*Egon Teiniker, 2020-2023, GPL v3.0*
