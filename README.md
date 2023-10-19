@@ -5,7 +5,7 @@ the concepts of security and penetration testing in Python.
 
 The following topics will be covered:
 
-* [Risk Analysis](rist-analysis/)
+* [Risk Analysis](risk-analysis/)
 
 * [Cryptography in Practice](cryptography/)
 
