@@ -2,7 +2,6 @@ import unittest
 import os
 import jwt
 
-
 class JsonWebTokenTest(unittest.TestCase):
 
     def test_secret_gen(self):

@@ -18,6 +18,7 @@ B) Brute Force Attack
     
         password_hash = "04e77bf8f95cb3e1a36a59d1e93857c411930db646b46c218a0352e432023cf2"
     
-    If the hash values match, you have found the plaintext password - print it to the
-    console window.
+    If the hash values match, you have found the plaintext password - 
+    print it to the console window.
 
+    Tip: Use file.read().splitlines()

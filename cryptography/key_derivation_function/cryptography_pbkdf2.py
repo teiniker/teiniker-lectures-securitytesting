@@ -17,8 +17,5 @@ class KeyDerivationFunctionTest(unittest.TestCase):
         key = kdf.derive(b"password")
         print(key.hex())
 
-
-    
-
 if __name__ == '__main__':
     unittest.main()
