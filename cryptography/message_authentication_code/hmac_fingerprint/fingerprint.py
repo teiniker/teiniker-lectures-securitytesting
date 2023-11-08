@@ -3,19 +3,19 @@ import hashlib
 import hmac
 
 class Fingerprint:
-    def __init__(self, key):
+    def __init__(self, key:str)->None:
         self.key_bytes = bytes.fromhex(key)
-        #print('key_bytes = ' + str(self.key_bytes))
+        print('key_bytes = ' + str(self.key_bytes))
 
-    def from_file(self, filename):
+    def from_file(self, filename:str)->str:
         with open(filename, 'rb') as f:
             buffer = f.read()
         return self.from_bytes(buffer)
 
-    def from_string(self, text):
+    def from_string(self, text:str)->str:
         return self.from_bytes(text.encode('utf-8'))
 
-    def from_bytes(self, data):
+    def from_bytes(self, data:bytes)->str:
         digest = hmac.new(self.key_bytes, data, hashlib.sha256)
         value = digest.hexdigest()
         return value
@@ -23,7 +23,7 @@ class Fingerprint:
 
 class FingerprintTest(unittest.TestCase):
     def setUp(self):
-        # The key consists of 32 random bytes 
+        # The key consists of 32 random bytes
         key = "fce0ddc9bf4ad0f68d92af77b42b486bd10c27bc1b45a4c4929cda4f63bf0386"
         self.fingerprint = Fingerprint(key)
 
@@ -45,6 +45,6 @@ class FingerprintTest(unittest.TestCase):
         mac = self.fingerprint.from_file(filename)
         print(f'mac of file      = {mac}')
         self.assertEqual("8c6f05f6800af9cd374f45c6d5b0a5bb8b4764629a4e130c510de8793b32f12d", mac)
- 
+
 if __name__ == '__main__':
     unittest.main()
