@@ -7,20 +7,20 @@ from cryptography.hazmat.primitives import hashes
 from cryptography.hazmat.primitives import serialization
 
 class DataFileVerifier:
-    def __init__(self, public_key):
+    def __init__(self, public_key)->None:
         self.public_key = public_key
 
-    def load_signature(self, filename):
-           with open(filename + '.signature', 'rb') as f:
+    def load_signature(self, filename:str):
+        with open(filename + '.signature', 'rb') as f:
             signature = f.read()
             return signature
 
-    def verify_data_file(self, filename):
+    def verify_data_file(self, filename:str)->None:
         with open(filename + '.data', 'rb') as f:
             data = f.read()
             print('Data: ' + data.hex())
 
-            signature = self.load_signature(filename)    
+            signature = self.load_signature(filename)
 
             self.public_key.verify(
                 signature,
@@ -32,7 +32,7 @@ class DataFileVerifier:
                 hashes.SHA256()
             )
             # If the signature does not match, verify() will raise an InvalidSignature exception.
-  
+
 
 class VerifierTest(unittest.TestCase):
     def setUp(self):
@@ -41,7 +41,7 @@ class VerifierTest(unittest.TestCase):
                 key_file.read()
             )
             self.verifier = DataFileVerifier(public_key)
-            
+
     def test_verify_valid(self):
         self.verifier.verify_data_file('measurement')
 

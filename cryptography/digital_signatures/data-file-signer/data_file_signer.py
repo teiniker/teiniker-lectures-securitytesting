@@ -6,14 +6,14 @@ from cryptography.hazmat.primitives import hashes
 from cryptography.hazmat.primitives import serialization
 
 class DataFileSigner:
-    def __init__(self, private_key):
+    def __init__(self, private_key)->None:
         self.private_key = private_key
 
-    def save_signature(self, filename, signature):
+    def save_signature(self, filename:str, signature)->None:
         with open(filename + '.signature', 'wb') as f:
             f.write(signature)
 
-    def sign_data_file(self, filename):
+    def sign_data_file(self, filename:str)->None:
         with open(filename + '.data', 'rb') as f:
             data = f.read()
             print(data.hex())
@@ -27,7 +27,7 @@ class DataFileSigner:
                     ),
                     hashes.SHA256()
                 )
-            print(signature.hex())    
+            print(signature.hex())
             self.save_signature(filename, signature)
 
 
@@ -41,8 +41,8 @@ class SignatureTest(unittest.TestCase):
             )
             print('Private key: ' + str(private_key))
             self.signer = DataFileSigner(private_key)
-            
-    def test_signing(self):        
+
+    def test_signing(self):
         self.signer.sign_data_file('measurement')
 
 

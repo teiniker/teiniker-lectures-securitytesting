@@ -3,8 +3,6 @@ from cryptography.hazmat.primitives.asymmetric import rsa
 from cryptography.hazmat.primitives import hashes
 from cryptography.hazmat.primitives.asymmetric import padding
 
-from cryptography.hazmat.primitives import serialization
-
 # Asymmetric Encryption
 # https://cryptography.io/en/latest/hazmat/primitives/asymmetric/index.html
 # Encryption is performed using the public key, meaning anyone can encrypt data.

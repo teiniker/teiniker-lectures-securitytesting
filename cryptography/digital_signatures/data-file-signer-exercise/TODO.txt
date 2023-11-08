@@ -15,14 +15,14 @@ A) Generate a pair of private and public keys
 B) Data file signer 
     Implement the following operations of the "DataFileSigner" class:
     
-    def __init__(self, private_key):
+    def  __init__(self, private_key)->None:
         Store the private_key within the object.
 
-    def save_signature(self, filename, signature):
+    def save_signature(self, filename:str, signature)->None:
         Take the signate as a bytes object and store it in a binary file with the 
         given filename and the extension ".signature".
 
-    def sign_data_file(self, filename):
+    def sign_data_file(self, filename:str)->None:
         Load the measurement file with the given filename and the extension ".data"
         from the local directory.
         Calculate the digital signature for that data and use the "save_signature()" 
@@ -34,15 +34,15 @@ B) Data file signer
 C) Data file verifier 
     Implement the following operations of the "DataFileVerifier" class:
 
-    def __init__(self, public_key):
+    def __init__(self, public_key)->None:
         Store the public_key within the object.
 
-    def load_signature(self, filename):
+    def load_signature(self, filename:str):
         Load the signature from the binary file with the given filename and the 
         extension ".signature".
         Return the signature as a bytes object.
 
-    def verify_data_file(self, filename):
+    def verify_data_file(self, filename:str)->None:
         Load the measurement data with the given filename and the extension ".data".
         Load the signature with the given filename and the extension ".signature".
         Verify the signature with the loaded measurement data.    
