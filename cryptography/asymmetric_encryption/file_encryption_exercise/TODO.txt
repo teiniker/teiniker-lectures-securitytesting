@@ -8,14 +8,14 @@ A) Client (file_encryptor.py)
   Uses the public key to encrypt data and store the data in a file called "secure.data"
   
   Implement a class called "FileEncryptor" which provides the following methods:
-    def __init__(self, public_key):
+    def __init__(self, public_key)->None:
     The constructor takes the public_key and stores it in the object.
 
-    def encrypt(self, plaintext):
+    def encrypt(self, plaintext:bytes)->bytes:
     The encrypt() method takes the public_key, encrypts the plaintext and 
     returns the ciphertext.
 
-    def save(self, filename, data):
+    def save(self, filename:str, data:bytes)->None:
     The save() method takes a bytes object, encrypts it and save the ciphertext in 
     a file of the given name.
 
@@ -27,14 +27,14 @@ B) Server (file_decryptor.py)
     "secure.data".
 
     Implement a class called "FileDecryptor" which provides the following methods:
-    def __init__(self, private_key):
+    def __init__(self, private_key)->None:
     The constructor takes the private_key and stores it in the object.
 
-    def decrypt(self, ciphertext):
+    def decrypt(self, ciphertext:bytes)->bytes:
     The decrypt() method takes the private_key, decrypts the ciphertext and 
     returns the plaintext.  
 
-    def load(self, filename):
+    def load(self, filename:str)->bytes:
     The load() method reads the encrypted file "secure.data", decrypts it  
     and returns the plaintext.
 

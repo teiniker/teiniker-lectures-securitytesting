@@ -1,21 +1,19 @@
 import unittest
-from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
-from cryptography.hazmat.primitives.asymmetric import rsa
 from cryptography.hazmat.primitives import serialization
 from cryptography.hazmat.primitives import hashes
 from cryptography.hazmat.primitives.asymmetric import padding
 
 
 class FileEncryptor:
-    def __init__(self, public_key):
+    def __init__(self, public_key)->None:
         self.public_key = public_key
 
-    def save(self, filename, data):
+    def save(self, filename:str, data:bytes)->None:
         ciphertext = self.encrypt(data)
         with open(filename, 'wb') as f:
             f.write(ciphertext)
 
-    def encrypt(self, plaintext):
+    def encrypt(self, plaintext:bytes)->bytes:
         ciphertext = self.public_key.encrypt(
             plaintext,
             padding.OAEP(
@@ -37,7 +35,7 @@ class FileEncryptorTest(unittest.TestCase):
 
     def test_save_bytes(self):
         data = b'\x00\x01\x02\x03\x04\x05\x06\x07\x08\x09\x0a\x0b\x0c\x0d\x0e\x0f'
-        hash = self.encrypter.save('secure.data', data)
+        self.encrypter.save('secure.data', data)
 
 
 if __name__ == '__main__':

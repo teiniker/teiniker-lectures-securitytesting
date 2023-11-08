@@ -1,21 +1,19 @@
 import unittest
-from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
-from cryptography.hazmat.primitives.asymmetric import rsa
 from cryptography.hazmat.primitives import serialization
 from cryptography.hazmat.primitives import hashes
 from cryptography.hazmat.primitives.asymmetric import padding
 
 
 class FileDecryptor:
-    def __init__(self, private_key):
+    def __init__(self, private_key)->None:
         self.private_key = private_key
 
-    def load(self, filename):
+    def load(self, filename:str)->bytes:
         with open(filename, 'rb') as f:
             ciphertext = f.read()
         return self.decrypt(ciphertext)
 
-    def decrypt(self, ciphertext):
+    def decrypt(self, ciphertext:bytes)->bytes:
         plaintext = self.private_key.decrypt(
             ciphertext,
             padding.OAEP(
