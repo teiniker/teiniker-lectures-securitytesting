@@ -12,12 +12,12 @@ class SymmetricEncryptionTest(unittest.TestCase):
     def test_encryption_and_decryption(self):
         encryptor = self.cipher.encryptor()
         ct = encryptor.update("This is a secret message.".encode('utf-8'))
-        encryptor.finalize()
+        #encryptor.finalize()
         print(ct.hex())
 
         decryptor = self.cipher.decryptor()
         pt = decryptor.update(ct)
-        decryptor.finalize()
+        #decryptor.finalize()
         print(pt.hex())
         print(pt.decode('utf-8'))
 

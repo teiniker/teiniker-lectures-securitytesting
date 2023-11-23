@@ -13,4 +13,4 @@ B) from_string(self, text:str)->str
 C) from_file(self, filename:str)->str
    Calculate a HMAC based on (SHA-256) from a given file with the name
    "filename" read from the filesystem.
-   
+   Read the file as a binary 'rb'.
