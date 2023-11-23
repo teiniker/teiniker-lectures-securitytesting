@@ -3,11 +3,6 @@ from cryptography.hazmat.primitives.asymmetric import rsa
 from cryptography.hazmat.primitives import hashes
 from cryptography.hazmat.primitives.asymmetric import padding
 
-# Asymmetric Encryption
-# https://cryptography.io/en/latest/hazmat/primitives/asymmetric/index.html
-# Encryption is performed using the public key, meaning anyone can encrypt data.
-# The data is then decrypted using the private key.
-
 class AsymmetricEncryptionTest(unittest.TestCase):
 
     def setUp(self):
@@ -29,9 +24,6 @@ class AsymmetricEncryptionTest(unittest.TestCase):
                 label=None
             )
         )
-        # Optimal Asymmetric Encryption Padding (OAEP) is a padding scheme
-        # often used together with RSA encryption.
-        # OAEP was introduced by Bellare and Rogaway and subsequently standardized in RFC 2437
         print('Ciphertext: ' + ciphertext.hex())
 
         # decrypt a message

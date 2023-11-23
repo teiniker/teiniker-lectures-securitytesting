@@ -3,10 +3,6 @@ import unittest
 from cryptography.hazmat.primitives.asymmetric import rsa
 from cryptography.hazmat.primitives import serialization
 
-# Asymmetric Keys
-# https://cryptography.io/en/latest/hazmat/primitives/asymmetric/index.html
-# Asymmetric encryption uses two keys - a private key and a public key.
-# Public keys are given out for anyone to use, you make them public information.
 
 class AsymmetricKeysTest(unittest.TestCase):
 
@@ -34,6 +30,7 @@ class AsymmetricKeysTest(unittest.TestCase):
             )
             print('Private key: ' + str(pk))
             print('Public  key: ' + str(pk.public_key()))
+
 
     def test_save_and_load_public_key(self):
         pem = self.public_key.public_bytes(

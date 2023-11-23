@@ -56,8 +56,7 @@ _Example_: RSA padding configuration
     * MGF1 (Mask Generation Function 1) is a component of the OAEP padding scheme.
     * It specifies how to generate a mask for the plaintext before encryption to add security.
     * The algorithm=hashes.SHA256() parameter specifies that the SHA256 hashing algorithm is 
-        used in the mask generation process. SHA256 is a widely-used cryptographic hash function 
-        known for its strong security properties.
+        used in the mask generation process. 
 * `algorithm=hashes.SHA256()`: 
     This parameter also specifies that the SHA256 hashing algorithm is used, but this time it's 
     for the OAEP padding scheme itself.
@@ -68,10 +67,13 @@ _Example_: RSA padding configuration
 
 ## References
 
+* [Asymmetric algorithms](https://cryptography.io/en/latest/hazmat/primitives/asymmetric/index.html)
+
+* [RFC2437: PKCS #1: RSA Cryptography Specifications](https://datatracker.ietf.org/doc/html/rfc2437)
+
 * David Hook. **Beginning Cryptography with Java**. Wrox, 2005
     Chapter 4: Asymmetric Key Cryptography
 
-* [RSA Signing and Encryption in Java](https://niels.nu/blog/2016/java-rsa.html)
   
 
 *Egon Teiniker, 2020 - 2023, GPL v3.0* 
