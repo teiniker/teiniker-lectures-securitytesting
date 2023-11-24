@@ -9,8 +9,6 @@ The following topics will be covered:
 
 * [Cryptography in Practice](cryptography/)
 
-* [Reverse Engineering](reverse-engineering/)
- 
 * [Penetration Testing](penetration-testing/)
 
 

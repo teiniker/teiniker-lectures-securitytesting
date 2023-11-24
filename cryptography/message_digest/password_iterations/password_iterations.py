@@ -8,7 +8,7 @@ class PasswordEncryption:
     def encrypt(self, plaintext_password, iterations):
         salt = secrets.token_bytes(16)
         print(f'salt: {salt.hex()}')
-        encrypted_password = self.encrypt_with_salt(salt, plaintext_password, iterations)  
+        encrypted_password = self.encrypt_with_salt(salt, plaintext_password, iterations)
         print(f'encrypted: {encrypted_password.hex()}')
         return encrypted_password
 
@@ -23,7 +23,7 @@ class PasswordEncryption:
         password_bytes = salt + plaintext_password.encode('utf-8')
         print(f'password_bytes: {password_bytes.hex()}')
         digest = hashlib.sha256()
-        for i in range(0, iterations):
+        for _ in range(iterations):
             digest.update(password_bytes)
             password_bytes = digest.digest()
 
