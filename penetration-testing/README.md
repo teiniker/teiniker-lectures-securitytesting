@@ -14,7 +14,6 @@ The following areas of penetration testing will be covered in the context of **e
     * Authentication
     * Authorization  
 
-* **Data Storage**
 
 ## References
 * Jason Andress. **Foundations of Information Security**. No Starch Press, 2019
