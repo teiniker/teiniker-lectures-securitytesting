@@ -5,7 +5,7 @@ from requests.auth import HTTPBasicAuth
 class ArticleServiceTest(unittest.TestCase):
 
     def test_find_all(self):
-        basic = HTTPBasicAuth('student', 'student')  
+        basic = HTTPBasicAuth('student', 'student')
         response = requests.get('https://localhost:8443/articles', verify=False, timeout=5, auth=basic)
         print(response.status_code)
         print(response.headers['content-type'])
