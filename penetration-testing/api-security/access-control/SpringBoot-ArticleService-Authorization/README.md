@@ -9,11 +9,6 @@ $ mvn spring-boot:run
 
 ## Access the REST Service
 
-Let's run the example:
-```
-$ mvn spring-boot:run
-```
-
 We can access the public `infos` resource **without authentication**.
 ```
 $ curl -i -k https://localhost:8443/infos

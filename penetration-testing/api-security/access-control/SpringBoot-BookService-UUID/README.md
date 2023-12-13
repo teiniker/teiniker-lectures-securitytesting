@@ -88,4 +88,4 @@ Date: Mon, 06 Feb 2023 18:21:13 GMT
 ## References
 * [Building a RESTful Web Service](https://spring.io/guides/gs/rest-service/)
 
-*Egon Teiniker, 2016 - 2023, GPL v3.0*
+*Egon Teiniker, 2020 - 2023, GPL v3.0*
