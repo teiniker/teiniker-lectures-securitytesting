@@ -219,4 +219,4 @@ elaborated on inside the documentation.
 
 * [List of HTTP status codes](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
 
-*Egon Teiniker, 2016-2023, GPL v3.0*
+*Egon Teiniker, 2020-2023, GPL v3.0*

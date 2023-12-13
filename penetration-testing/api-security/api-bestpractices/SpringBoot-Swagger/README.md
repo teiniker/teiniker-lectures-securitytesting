@@ -39,4 +39,4 @@ springdoc.api-docs.path=/api-docs
 
 * [swagger-annotations API](https://javadoc.io/doc/io.swagger.core.v3/swagger-annotations/latest/index.html)
 
-*Egon Teiniker, 2016-2023, GPL v3.0*
+*Egon Teiniker, 2020-2023, GPL v3.0*
