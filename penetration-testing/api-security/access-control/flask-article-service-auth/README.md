@@ -13,6 +13,13 @@ We start the web service from the command line:
 $ python3 article_service.py
 ```
 
+## Flask-HTTPAuth
+
+Flask-HTTPAuth is a Flask extension that simplifies the use of HTTP authentication with Flask routes.
+
+The function decorated with the `verify_password` decorator receives the username and password sent by the client. If the credentials belong to a user, then the function should return the user object. If the credentials are invalid the function can return `None` or `False`. The user object can then be queried from the `current_user()` method of the authentication instance.
+
+
 ## Access the REST Service
 
 ### Find all Articles
@@ -123,3 +130,4 @@ Connection: close
 ## References
 * [Python-API-Development-Fundamentals: Lesson01](https://github.com/TrainingByPackt/Python-API-Development-Fundamentals/blob/master/Lesson01/Activity02/basic-api/app.py)
 
+* [Flask-HTTPAuth](https://flask-httpauth.readthedocs.io/en/latest/)

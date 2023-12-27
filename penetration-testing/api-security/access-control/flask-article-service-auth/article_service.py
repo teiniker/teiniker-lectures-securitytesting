@@ -1,6 +1,7 @@
 from http import HTTPStatus
 from flask_httpauth import HTTPBasicAuth
 from flask import Flask, jsonify, request
+from werkzeug.security import generate_password_hash, check_password_hash
 
 # Simulate a database table in a list
 table = [
@@ -12,12 +13,18 @@ table = [
 app = Flask(__name__)
 auth = HTTPBasicAuth()
 
+users = {
+    "student": generate_password_hash("student"),
+    "homer": generate_password_hash("duffbeer")
+}
+
 @auth.verify_password
 def verify_password(username, password):
-    if username == 'student' and password == 'student':
-        return True
+    if username in users and check_password_hash(users.get(username), password):
+        return username
     else:
-        return False
+        return None
+
 
 @app.route('/articles', methods = ['GET'])
 @auth.login_required
