@@ -131,3 +131,5 @@ Connection: close
 * [Python-API-Development-Fundamentals: Lesson01](https://github.com/TrainingByPackt/Python-API-Development-Fundamentals/blob/master/Lesson01/Activity02/basic-api/app.py)
 
 * [Flask-HTTPAuth](https://flask-httpauth.readthedocs.io/en/latest/)
+
+*Egon Teiniker, 2020-2023, GPL v3.0*

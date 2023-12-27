@@ -20,9 +20,9 @@ users = {
 }
 
 roles = {
-    "burns": "admin",
-    "homer": "user",
-    "student": "user"
+    "burns": ["admin", "user"],
+    "homer": ["user"],
+    "student": ["user"]
 }
 
 @auth.verify_password
@@ -32,18 +32,18 @@ def verify_password(username, password):
     else:
         return None
 
+@auth.get_user_roles
+def get_user_roles(user):
+    return roles.get(user)
+
 @app.route('/articles', methods = ['GET'])
-@auth.login_required
+@auth.login_required(role="admin")
 def find_all():
-    user_role = roles.get(auth.current_user())
-    if user_role == 'admin':
-        return jsonify({'data': table}), HTTPStatus.OK
-    else:
-        return jsonify({"ERROR": "Role admin is required!"}), HTTPStatus.UNAUTHORIZED
+    return jsonify({'data': table}), HTTPStatus.OK
 
 
 @app.route('/articles/<int:oid>', methods = ['GET'])
-@auth.login_required
+@auth.login_required(role=["admin", "user"])
 def find_by_id(oid):
     for item in table:
         print(item)
@@ -53,7 +53,7 @@ def find_by_id(oid):
 
 
 @app.route('/articles', methods=['POST'])
-@auth.login_required
+@auth.login_required(role="admin")
 def insert():
     data = request.get_json()
     print(data)
@@ -70,7 +70,7 @@ def insert():
 
 
 @app.route('/articles/<int:oid>', methods=['PUT'])
-@auth.login_required
+@auth.login_required(role="admin")
 def update(oid):
     for item in table:
         print(item)
@@ -83,7 +83,7 @@ def update(oid):
 
 
 @app.route('/articles/<int:oid>', methods=['DELETE'])
-@auth.login_required
+@auth.login_required(role="admin")
 def delete(oid):
     for item in table:
         print(item)
