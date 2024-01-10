@@ -11,6 +11,7 @@ table = [
 ]
 
 app = Flask(__name__)
+
 auth = HTTPBasicAuth()
 
 users = {
