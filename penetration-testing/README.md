@@ -6,13 +6,16 @@ The goal of penetration testing is to **find the holes in our security** so that
 
 The following areas of penetration testing will be covered in the context of **embedded web applications**:
 
-
 * **API Security Basics**
   * [HTTP/S Protocol](api-security/http-protocol)
   * [API Best Practices](api-security/api-bestpractices/)
-  * [Access Control](api-security/access-control)
-    * Authentication
-    * Authorization  
+  * Access Control
+    * [Authentication](api-security/access-control/authentication/)
+    * [Authorization](api-security/access-control/authorization/)  
+
+* **Data Stores**
+  * [File Handling](datastores/file-handling/)
+
 
 
 ## References
@@ -23,5 +26,5 @@ The following areas of penetration testing will be covered in the context of **e
 * Jon Erickson. **Hacking - The Art of Exploitation**. No Starch Press, 2nd Edition, 2008
 * Daniel Regalado, Shon Harris, Allen Harper, Chris Eagle, Jonathan Ness, Branko Spasojevic, Ryan Linn, Stephen Sims. **Gray Hat Hacking**. McGraw Hill Education, 4th Edition, 2015
 
-*Egon Teiniker, 2020-2023, GPL v3.0*
+*Egon Teiniker, 2020-2024, GPL v3.0*
  

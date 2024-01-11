@@ -108,3 +108,5 @@ Connection: close
 
 ## References
 * [Python-API-Development-Fundamentals: Lesson01](https://github.com/TrainingByPackt/Python-API-Development-Fundamentals/blob/master/Lesson01/Activity02/basic-api/app.py)
+
+* [Python REST API Tutorial - Building a Flask REST API](https://youtu.be/GMppyAPbLYk?si=xjvZIr3PTYIpQ_Ir)
