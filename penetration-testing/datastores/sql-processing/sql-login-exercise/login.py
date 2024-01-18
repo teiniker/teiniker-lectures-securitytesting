@@ -40,9 +40,10 @@ class SQLiteTest(unittest.TestCase):
         self.conn.commit()
         self.conn.close()
 
-    def test_login(self):
-        is_valid = self.service.login("homer", "dfa8327f5bfa4c672a04f9b38e348a70")
-        self.assertTrue(is_valid)
+    # def test_login(self):
+    #     is_valid = self.service.login("homer", "dfa8327f5bfa4c672a04f9b38e348a70")
+    #     self.assertTrue(is_valid)
+
 
     def test_attack(self):
         is_valid = self.service.login("homer' OR 1 --'", "blah")

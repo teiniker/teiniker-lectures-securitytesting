@@ -6,7 +6,7 @@ class LoginService:
         self.conn = conn
 
     def login(self, username, password):
-        sql = f"SELECT id FROM user WHERE username = ? AND password = ?"
+        sql = "SELECT id FROM user WHERE username = ? AND password = ?"
         print(sql)
         parameters = (username, password)
         cur = self.conn.cursor()
