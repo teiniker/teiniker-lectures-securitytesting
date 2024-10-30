@@ -6,6 +6,7 @@ from cryptography.hazmat.primitives.asymmetric import padding
 
 class FileDecryptor:
     def __init__(self, private_key)->None:
+        print(type(private_key))
         self.private_key = private_key
 
     def load(self, filename:str)->bytes:
