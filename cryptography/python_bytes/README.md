@@ -18,7 +18,7 @@ Distinguish the following types in Python:
 * **bytes**:
     Byte strings in Python 3 are officially called bytes, an immutable sequence of integers in the range 0x00 <= x <= 0xff.
 
-* **bytearray**:     
+* **bytearray**:
     Another bytes-like object added in 2.6 is the bytearray - similar to **bytes**, but mutable.   
 
 
@@ -100,5 +100,5 @@ The possible digits are `0`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `A`, `
 * [Python Bytes, Bytearray](https://www.w3resource.com/python/python-bytes.php)
 * [base64 — Base16, Base32, Base64, Base85 Data Encodings](https://docs.python.org/3/library/base64.html)
 
-*Egon Teiniker, 2020-2022, GPL v3.0*
+*Egon Teiniker, 2020-2024, GPL v3.0*
  
