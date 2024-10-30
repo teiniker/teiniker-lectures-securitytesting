@@ -70,7 +70,7 @@ To retrieve random data from `secrets`, we can use the following methods:
 If `nbytes` is `None` or not supplied, a reasonable default is used.
 
 
-## Generating Psuedo Random Numbers using OpenSSL
+## OpenSSL: Generating Psuedo Random Numbers 
 The following command line generates a number of random bytes, which can either be output raw, as `Base64` or as `HEX`:
 ```
 $ openssl rand -hex 16
@@ -95,4 +95,4 @@ This command generates random bytes using a **cryptographically secure pseudo ra
 * Jean-Philippe Aumasson. Serious Cryptography. No Starch Press, 2018
     * Chapter 2: Randomness
 
-*Egon Teiniker, 2020-2022, GPL v3.0*    
+*Egon Teiniker, 2020-2024, GPL v3.0*    
