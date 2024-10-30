@@ -20,7 +20,7 @@ class PasswordEncryption:
         return new_encrypted_password  == encrypted_password
 
     def encrypt_with_salt(self, salt, plaintext_password):
-        password_bytes = plaintext_password.encode('utf-8')
+        password_bytes = bytes(plaintext_password,'utf-8')
         digest = hashlib.sha256()
         digest.update(salt)
         digest.update(password_bytes)
