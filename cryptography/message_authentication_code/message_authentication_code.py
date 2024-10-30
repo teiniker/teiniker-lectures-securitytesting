@@ -11,9 +11,9 @@ class MessageAuthenticationCodeTest(unittest.TestCase):
         print('key = ' + str(self.key))
 
     def test_HMAC(self):
-        msg = "This is a message.".encode('utf-8')
+        msg = bytes("This is a message.",'utf-8')
         digest = hmac.new(self.key, msg, hashlib.sha256)
-        # digest.update("another message".encode('utf-8'))
+        # digest.update(bytes("another message", 'utf-8'))
         value = digest.hexdigest()
         print('hmac = ' + value)
 

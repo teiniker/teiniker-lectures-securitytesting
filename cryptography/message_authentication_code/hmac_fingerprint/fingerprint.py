@@ -13,7 +13,7 @@ class Fingerprint:
         return self.from_bytes(buffer)
 
     def from_string(self, text:str)->str:
-        return self.from_bytes(text.encode('utf-8'))
+        return self.from_bytes(bytes(text, 'utf-8'))
 
     def from_bytes(self, data:bytes)->str:
         digest = hmac.new(self.key_bytes, data, hashlib.sha256)
@@ -28,8 +28,7 @@ class FingerprintTest(unittest.TestCase):
         self.fingerprint = Fingerprint(key)
 
     def test_from_bytes(self):
-        data = bytearray(b'\x00\x01\x02\x03\x04\x05\x06\x07\x08\x09\x0a\x0b\x0c\x0d\x0e\x0f')
-        print(data)
+        data = b'\x00\x01\x02\x03\x04\x05\x06\x07\x08\x09\x0a\x0b\x0c\x0d\x0e\x0f'
         mac = self.fingerprint.from_bytes(data)
         print(f'mac of byte array = {mac}')
         self.assertEqual("9864b5619d85f2c0d8025bdfcf375d9f1c95aca25fea7fa235053f2f60925086", mac)
@@ -41,10 +40,10 @@ class FingerprintTest(unittest.TestCase):
         self.assertEqual("a88533ad56b2acaa1d569cae1a9a6785b0a5cd2dc266ee601dc33667ff9daa6f", mac)
 
     def test_from_file(self):
-        filename = "wordlist.txt"
+        filename = "./tux.jpeg"
         mac = self.fingerprint.from_file(filename)
         print(f'mac of file      = {mac}')
-        self.assertEqual("8c6f05f6800af9cd374f45c6d5b0a5bb8b4764629a4e130c510de8793b32f12d", mac)
+        self.assertEqual("0f23c00edc0ae15fea5834e0ea0b447d549938fc5f267920741caf2dce1c5490", mac)
 
 if __name__ == '__main__':
     unittest.main()
