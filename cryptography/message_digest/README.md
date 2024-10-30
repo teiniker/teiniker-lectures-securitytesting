@@ -79,4 +79,4 @@ SHA256(wordlist.txt)= fd17b0ff31d7fb7b4e202b0cd99e1f11aa1f4972aab81010544a4e562f
 
 * [openssl](https://www.openssl.org/docs/man1.1.1/man1/openssl.html)
 
-*Egon Teiniker, 2016 - 2022, GPL v3.0* 
+*Egon Teiniker, 2016-2024, GPL v3.0* 
