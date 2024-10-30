@@ -9,19 +9,25 @@ class BytesTest(unittest.TestCase):
         self.assertTrue(type(s1) is str)
         self.assertTrue(type(s2) is bytes)
 
+    def test_constructor(self):
+        msg = "message"
+        b = bytes(msg, 'utf-8')
+        self.assertTrue(type(b is bytes))
+        self.assertEqual(b'message', b)
+
     def test_encode(self):
         msg = "message"
         b = "message".encode('utf-8')
         self.assertTrue(type(b is bytes))
         self.assertEqual(b'message', b)
         
-    def test_hexstring_to_bytes(self):
+    def test_fromhex(self):
         hex_str = 'f9cdb9ec44d8d3c18d41cdf26ae6123c'
         b = bytes.fromhex(hex_str)
         self.assertTrue(type(b is bytes))
         self.assertEqual(b'\xf9\xcd\xb9\xecD\xd8\xd3\xc1\x8dA\xcd\xf2j\xe6\x12<', b)
         
-    def test_bytes_to_hexstring(self):
+    def test_to_hex(self):
         b = b'\xf9\xcd\xb9\xecD\xd8\xd3\xc1\x8dA\xcd\xf2j\xe6\x12<'
         hex_str = b.hex()
         self.assertTrue(type(hex_str is str))
