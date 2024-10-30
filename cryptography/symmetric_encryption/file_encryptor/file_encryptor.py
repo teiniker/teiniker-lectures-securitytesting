@@ -10,7 +10,7 @@ class FileEncryptor:
             ciphertext = f.read()
         return self.decrypt(ciphertext)
 
-    def save(self, filename:str, data:bytearray)->None:
+    def save(self, filename:str, data:bytes)->None:
         ciphertext = self.encrypt(data)
         with open(filename, 'wb') as f:
             f.write(ciphertext)
