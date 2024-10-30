@@ -32,10 +32,10 @@ The terms “secure hash” and “message digest” are interchangeable.
 _Example_: Calculate SHA256 Message Digest
 ```Python
     def test_SHA256(self):
-        b = "message".encode('utf-8')
-        m = hashlib.sha256()
-        m.update(b)
-        value = m.hexdigest()
+        b = bytes("message", 'utf-8')
+        digest = hashlib.sha256()
+        digest.update(b)
+        value = digest.hexdigest()
         print(value)
 ```
 
