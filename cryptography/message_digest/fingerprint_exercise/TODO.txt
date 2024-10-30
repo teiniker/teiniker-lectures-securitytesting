@@ -14,4 +14,4 @@ C) from_file(self, filename)
    "filename" read from the filesystem.
    
    Compare your fingerprint with the output of the command line tool:
-       $ sha256sum wordlist.txt
+       $ sha256sum tux.jpeg
