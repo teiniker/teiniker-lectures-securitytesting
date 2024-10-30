@@ -7,7 +7,7 @@ import os
 class PasswordEncryption:
 
     def encrypt(self, password):
-        password_bytes = password.encode('utf-8')
+        password_bytes = bytes(password,'utf-8')
         digest = hashlib.sha256()
         digest.update(password_bytes)
         password_hash = digest.hexdigest()
