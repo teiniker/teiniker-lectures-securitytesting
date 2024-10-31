@@ -64,8 +64,8 @@ sha512-256        shake128          shake256          sm3
 ```
 
 ```
-$ openssl dgst -sha256 wordlist.txt 
-SHA256(wordlist.txt)= fd17b0ff31d7fb7b4e202b0cd99e1f11aa1f4972aab81010544a4e562f42bac7
+$ openssl dgst -sha256 tux.jpeg 
+SHA256(tux.jpeg)= 44eefdc0d4b5ea8d999d743e2651044f8033585ef3c97b2d69b508ad8c282cf1
 ```
 
 ## Referecnes
