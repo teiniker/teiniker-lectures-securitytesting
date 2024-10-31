@@ -29,7 +29,7 @@ Distinguish the following types in Python:
 *  The syntax for **bytes literals** is largely the same as that for string literals, 
     except that a `b` prefix is added:
     
-    _Example:_ `b = b'\xf9\xcd\xb9\xec`
+    _Example:_ `b = b'\xf9\xcd\xb9\xec'`
     
 * `bytes(s:str, encoding:str)`: This constructor creates a bytes object from a string 
     of Unicode characters encoded in the requested encoding.
