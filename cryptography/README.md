@@ -4,18 +4,18 @@ Cryptography is the basis of sustainable information security.
 The following examples show the most important **cryptographic operations in their applications**.
 
 * Python 
-  * [Python Bytes and Bytearrays](https://github.com/teiniker/teiniker-lectures-securitytesting/tree/main/cryptography/python_bytes)
-  * [Setup Cryptographic Libraries in Python](https://github.com/teiniker/teiniker-lectures-securitytesting/tree/main/cryptography/setup)
+  * [Python Bytes and Bytearrays](python_bytes/)
+  * [Setup Cryptographic Libraries in Python](../setup/cryptography/README.md)
   
 * Encryption of Data at Rest
-  * [Random Numbers](https://github.com/teiniker/teiniker-lectures-securitytesting/blob/main/cryptography/random_numbers/)
-  * [Message Digest](https://github.com/teiniker/teiniker-lectures-securitytesting/blob/main/cryptography/message_digest/)
-  * [Key Derivation Functions](https://github.com/teiniker/teiniker-lectures-securitytesting/tree/main/cryptography/key_derivation_function/)
-  * [Message Authentication Code](https://github.com/teiniker/teiniker-lectures-securitytesting/blob/main/cryptography/message_authentication_code/)
-  * [Symmetric Encryption](https://github.com/teiniker/teiniker-lectures-securitytesting/blob/main/cryptography/symmetric_encryption/)
-  * [Asymmetric Encryption](https://github.com/teiniker/teiniker-lectures-securitytesting/blob/main/cryptography/asymmetric_encryption/)
-  * [Digital Signatures](https://github.com/teiniker/teiniker-lectures-securitytesting/blob/main/cryptography/digital_signatures/)
-  * [Digital Certificates](https://github.com/teiniker/teiniker-lectures-securitytesting/tree/main/cryptography/digital_certificates)
+  * [Random Numbers](random_numbers/)
+  * [Message Digest](message_digest/)
+  * [Key Derivation Functions](key_derivation_function/)
+  * [Message Authentication Code](message_authentication_code/)
+  * [Symmetric Encryption](symmetric_encryption/)
+  * [Asymmetric Encryption](asymmetric_encryption/)
+  * [Digital Signatures](digital_signatures/)
+  * [Digital Certificates](digital_certificates)
 
 * Encryption of Data in Transit
 
@@ -25,5 +25,5 @@ The following examples show the most important **cryptographic operations in the
 * Jean-Philippe Aumasson. **Serious Cryptography**. No Starch Press 2018
 
 
-*Egon Teiniker, 2020-2022, GPL v3.0*
+*Egon Teiniker, 2020-2024, GPL v3.0*
  
