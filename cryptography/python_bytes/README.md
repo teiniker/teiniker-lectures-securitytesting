@@ -70,9 +70,27 @@ be an integer, while `b[0:1]` will be a bytes object of length `1`.
     _Example:_ `s = ba.hex()`
 
 
-## Bytes vs. Strings 
+## Unicode and Encoding
 
-In Python, `str.encode('utf-8')` and `bytes.decode('utf-8')` are methods 
+Python’s string type uses the Unicode Standard for representing 
+characters, which lets Python programs work with all these different 
+possible characters.
+
+The Unicode standard describes how characters are represented by 
+**code points**. A code point value is an integer in the range 
+`0` to `0x10FFFF`.
+
+The rules for translating a Unicode string into a sequence of bytes 
+are called a character encoding, or just an encoding.
+
+`UTF-8` is one of the most commonly used encodings, and Python often 
+defaults to using it. UTF stands for “Unicode Transformation Format”, 
+and the ‘8’ means that 8-bit values are used in the encoding. 
+
+Since Python 3.0, the language’s `str` type contains Unicode characters
+and the default encoding for Python source code is UTF-8.
+
+`str.encode('utf-8')` and `bytes.decode('utf-8')` are methods 
 used to convert between string (text) data and bytes (binary) data. 
 
 These conversions are essential for operations like encryption, where data 
