@@ -29,7 +29,7 @@ Distinguish the following types in Python:
 *  The syntax for **bytes literals** is largely the same as that for string literals, 
     except that a `b` prefix is added:
     
-    _Example:_ `b = b'\xf9\xcd\xb9\xec`
+    _Example:_ `b = b'\xf9\xcd\xb9\xec'`
     
 * `bytes(s:str, encoding:str)`: This constructor creates a bytes object from a string 
     of Unicode characters encoded in the requested encoding.
@@ -39,7 +39,7 @@ Distinguish the following types in Python:
 * `bytes.fromhex(s:str)`: This method **creates a bytes object** from a string 
     of hexadecimal digits.
 
-    _Example:_ `b = 'bytes.fromhex(f9cdb9ec44d8d3c18d41cdf26ae6123c')`
+    _Example:_ `b = bytes.fromhex('f9cdb9ec44d8d3c18d41cdf26ae6123c')`
 
 * `hex(b:bytes)`: This function **returns a string object** containing two hexadecimal 
     digits for each byte in the input bytes object.
