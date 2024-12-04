@@ -7,14 +7,21 @@ The goal of penetration testing is to **find the holes in our security** so that
 The following areas of penetration testing will be covered in the context of **embedded web applications**:
 
 * **API Security Basics**
+
   * [HTTP/S Protocol](api-security/http-protocol)
+
   * [API Best Practices](api-security/api-bestpractices/)
+
   * Access Control
+
     * [Authentication](api-security/access-control/authentication/)
+
     * [Authorization](api-security/access-control/authorization/)  
 
 * **Data Stores**
+
   * [File Handling](datastores/file-handling/)
+
   * [SQL Processing](datastores/sql-processing/)
 
 
