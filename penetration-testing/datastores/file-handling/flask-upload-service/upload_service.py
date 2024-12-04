@@ -1,7 +1,5 @@
 import os
-import magic
 from flask import Flask, request, jsonify
-from werkzeug.utils import secure_filename
 
 UPLOAD_FOLDER = 'uploads'
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
@@ -26,13 +24,11 @@ def upload_file():
         return jsonify({'message': 'No selected file'}), 400
 
     if file and allowed_file(file.filename):
-        # filename = secure_filename(file.filename)
         filename = file.filename
         file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
         return jsonify({'message': f'File {filename} uploaded successfully'}), 200
 
     return jsonify({'message': 'Allowed file types are png, jpg, jpeg, gif'}), 400
-
 
 if __name__ == '__main__':
     os.makedirs(UPLOAD_FOLDER, exist_ok=True)
