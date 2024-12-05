@@ -24,7 +24,11 @@ We start the web service from the command line:
 $ python3 article_service.py
 ```
 
-## Access the REST Service
+
+## Access REST Service via cURL
+
+Note that the used UUIDs in the following examples are randomly generated and
+will differ from the ones shown here.
 
 ### Find all Articles
 ```

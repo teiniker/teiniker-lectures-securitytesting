@@ -1,7 +1,8 @@
-# Role-Based Authorization
+# Example: Method-Level Authorization - Article Service
 
-In this example, we can see how simple a RESTful service can be implemented with
-**Flask** using Basic Authentication and Role-Based Authorization.
+In this example, we can see how simple a RESTful service can be implemented 
+with **Flask** using **Basic Authentication** and **Role-Based Authorization**
+on HTTP method level.
 
 ## Setup 
 ```
@@ -13,17 +14,63 @@ We start the web service from the command line:
 $ python3 article_service.py
 ```
 
-## Role-Based Authorization
+## Implementation Details
 
-Flask-HTTPAuth includes a simple role-based authentication system that can optionally 
-be added to provide an additional layer of granularity in filtering accesses to routes. 
+The following code snippets show the implementation of Role-Based Authorization 
+at the method level within the Flask web server.
 
-To enable role support, write a function that returns the list of roles for a given user 
-and decorate it with the `get_user_roles` decorator.
+* **User and Role Management**:
+
+  ```Python
+  users = 
+  {
+      "student": generate_password_hash("student"),
+      "homer": generate_password_hash("duffbeer"),
+      "burns": generate_password_hash("money")
+  }
+
+  roles = 
+  {
+      "burns": ["admin", "user"],
+      "homer": ["user"],
+      "student": ["user"]
+  }
+  ```
+
+  * `users` is a dictionary that stores usernames and hashed passwords.
+      `generate_password_hash` hashes passwords for secure storage (not 
+      storing plaintext passwords). 
+  
+  * `roles` defines the roles associated with each user.
+    For example, `burns` has both `admin` and `user` roles, while `homer` 
+    and `student` only have the user role.
+
+* **Role Retrieval**:
+
+  ```Python
+  @auth.get_user_roles
+  def get_user_roles(user):
+      return roles.get(user)
+  ```
+
+  * This function retrieves the roles of the authenticated user from the 
+    roles dictionary.
+
+* **Protected Route**:
+
+  ```Python
+  @app.route('/articles', methods=['GET'])
+  @auth.login_required(role="admin")
+  def find_all():
+      return jsonify({'data': table}), HTTPStatus.OK
+  ```
+  * **Route**: `/articles` is a GET endpoint.
+
+  * **Decorator**: `@auth.login_required(role="admin")` requires authentication.
+    Only users with the `admin` role can access this route.
 
 
-## Access the REST Service
-
+## Access REST Service via cURL
 
 ### Find all Articles
 
@@ -198,8 +245,3 @@ Date: Wed, 27 Dec 2023 10:28:44 GMT
 Content-Type: text/html; charset=utf-8
 Connection: close
 ```
-
-## References
-* [Flask-HTTPAuth](https://flask-httpauth.readthedocs.io/en/latest/)
-
-*Egon Teiniker, 2020-2023, GPL v3.0*
