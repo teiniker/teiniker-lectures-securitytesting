@@ -73,6 +73,8 @@ unique vulnerabilities and security risks of
     the target API directly.
 
 ## References
+* [YouTube: OWASP API Security Top 10 Course – Secure Your Web Apps](https://youtu.be/YYe0FdfdgDU?si=ZTVH6qoshsJCOwF1)
+
 * [OWASP API Security Project](https://owasp.org/www-project-api-security/) 
 
 *Egon Teiniker, 2020-2023, GPL v3.0*	
