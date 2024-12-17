@@ -30,7 +30,7 @@ if not isinstance(user_input, int):
 Boundary Checking validates that input is within acceptable numeric 
 or length ranges.
 
-_Example:_ Type checking in Python
+_Example:_ Boundary checking in Python
 
 ```Python
 if not (0 <= age <= 120):
