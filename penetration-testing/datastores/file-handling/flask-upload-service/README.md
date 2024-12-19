@@ -31,6 +31,8 @@ This upload process works as follows:
 _Example:_ curls sends a file to the server:
 ```
 $ curl -ik -X POST -F "file=@./images/tux.jpeg" https://localhost:8443/uploads
+
+$ curl -ik --proxy http://localhost:8010 -X POST -F "file=@./images/tux.jpeg" https://localhost:8443/uploads
 ```
 
 This curl command sends an HTTP POST request to `https://localhost:8443/uploads`
