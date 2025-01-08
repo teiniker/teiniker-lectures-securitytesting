@@ -1,6 +1,42 @@
 # SpringBoot Actuator Framework
 
-## Setup
+
+## Using the Book Service
+
+The `/books` service is used here only as an example. 
+The focus is on the `/actuator` endpoints.
+
+### Find Books
+
+```
+$ curl -i http://localhost:8080/books
+```
+
+```
+$ curl -i http://localhost:8080/books/2
+```
+
+```
+$ curl -i http://localhost:8080/books/99
+```
+
+### Insert a Book
+```
+$ curl -i -X POST http://localhost:9090/books -H 'Content-type:application/json' -d '{"author":"Robert C. Martin","title":"Clean Code","isbn":"978-0132350884"}'
+```
+
+### Update a Book
+```
+$ curl -i -X PUT http://localhost:9090/books/1 -H 'Content-type:application/json' -d '{"author":"Joshua Bloch","title":"Effective Java, 2nd Edition","isbn":"978-0134685991"}'
+```
+
+### Delete a Book
+```
+$ curl -i -X DELETE http://localhost:9090/books/2
+```
+
+
+## Setup Actuator Framework
 
 The **Actuator framework** can easily be **added to an existing REST service**.
 
@@ -313,42 +349,6 @@ $ cd /opt/visualvm_2110/
 $ bin/visualvm
     File | Load => dump
 ```
-
-
-## Using the Book Service
-
-The `/books` service is used here only as an example. 
-The focus is on the `/actuator` endpoints.
-
-### Find Books
-
-```
-$ curl -i http://localhost:8080/books
-```
-
-```
-$ curl -i http://localhost:8080/books/2
-```
-
-```
-$ curl -i http://localhost:8080/books/99
-```
-
-### Insert a Book
-```
-$ curl -i -X POST http://localhost:9090/books -H 'Content-type:application/json' -d '{"author":"Robert C. Martin","title":"Clean Code","isbn":"978-0132350884"}'
-```
-
-### Update a Book
-```
-$ curl -i -X PUT http://localhost:9090/books/1 -H 'Content-type:application/json' -d '{"author":"Joshua Bloch","title":"Effective Java, 2nd Edition","isbn":"978-0134685991"}'
-```
-
-### Delete a Book
-```
-$ curl -i -X DELETE http://localhost:9090/books/2
-```
-
 
 ## References
 
