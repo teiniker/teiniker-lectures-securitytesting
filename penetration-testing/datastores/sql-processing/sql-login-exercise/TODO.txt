@@ -8,3 +8,4 @@ vulnerability.
 
 Use "SQLiteTest" to verify your implementation - both tests should pass!
 
+Tip: Use a PreparedStatement to prevent SQL injection.
