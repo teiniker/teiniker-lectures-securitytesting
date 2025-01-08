@@ -315,38 +315,38 @@ $ bin/visualvm
 ```
 
 
-## Using the Article Service
+## Using the Book Service
 
-The `/articles` service is used here only as an example. 
+The `/books` service is used here only as an example. 
 The focus is on the `/actuator` endpoints.
 
-### Find Articles
+### Find Books
 
 ```
-$ curl -i http://localhost:8080/articles
-```
-
-```
-$ curl -i http://localhost:9090/articles/2
+$ curl -i http://localhost:8080/books
 ```
 
 ```
-$ curl -i http://localhost:9090/articles/99
+$ curl -i http://localhost:8080/books/2
 ```
 
-### Insert an Article
 ```
-$ curl -i -X POST http://localhost:9090/articles -H 'Content-type:application/json' -d '{"description": "Microservices Patterns: With examples in Java", "price": 2550}'
-```
-
-### Update an Article
-```
-$ curl -i -X PUT http://localhost:9090/articles/2 -H 'Content-type:application/json' -d '{"description": "Effective Java", "price": 9999}'
+$ curl -i http://localhost:8080/books/99
 ```
 
-### Delete an Article
+### Insert a Book
 ```
-$ curl -i -X DELETE http://localhost:9090/articles/3
+$ curl -i -X POST http://localhost:9090/books -H 'Content-type:application/json' -d '{"author":"Robert C. Martin","title":"Clean Code","isbn":"978-0132350884"}'
+```
+
+### Update a Book
+```
+$ curl -i -X PUT http://localhost:9090/books/1 -H 'Content-type:application/json' -d '{"author":"Joshua Bloch","title":"Effective Java, 2nd Edition","isbn":"978-0134685991"}'
+```
+
+### Delete a Book
+```
+$ curl -i -X DELETE http://localhost:9090/books/2
 ```
 
 
@@ -356,4 +356,4 @@ $ curl -i -X DELETE http://localhost:9090/articles/3
 
 * [38C3: Wir wissen wo dein Auto steht - Volksdaten von Volkswagen](https://media.ccc.de/v/38c3-wir-wissen-wo-dein-auto-steht-volksdaten-von-volkswagen)
 
-*Egon Teiniker, 2016-2024, GPL v3.0*
+*Egon Teiniker, 2016-2025, GPL v3.0*
