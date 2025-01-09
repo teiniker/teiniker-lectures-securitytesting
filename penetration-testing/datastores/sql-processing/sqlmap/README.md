@@ -53,6 +53,8 @@ We can also download the latest version of sqlmap from the
 
 ## References
 
+* [YouTube: How Hackers Exploit SQL Injections And Use SQLmap](https://youtu.be/WsufKF2N6Sg?si=lqXvvIHhq1PSJeRv)
+
 * [SQLMap](https://sqlmap.org/)
 
 * [SQLMap Wiki](https://github.com/sqlmapproject/sqlmap/wiki
